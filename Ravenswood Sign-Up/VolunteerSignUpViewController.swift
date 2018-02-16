@@ -98,7 +98,7 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
         
         // ADDED - template code for data listener
         refHandle = ref?.child("users").observe(.childAdded, with: { (snapshot) in
-            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+            //let postDict = snapshot.value as? [String : AnyObject] ?? [:]
             // ...
         })
     }

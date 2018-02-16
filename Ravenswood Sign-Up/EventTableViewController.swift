@@ -12,16 +12,24 @@ import FirebaseDatabase
 
 class EventTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return Events.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return EventTable.dequeueReusableCell(withIdentifier: "hinew")!
+        let cell = EventTable.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath)
+        if let EventCell = cell as? EventTableViewCell{
+            let event = Events [indexPath.item]
+            EventCell.Date.text = event.Date
+            EventCell.Location.text = event.Location
+            EventCell.Name.text = event.Name
+        }
+        
+        return cell
     }
     
     var ref: DatabaseReference?
     var refHandle: DatabaseHandle?
-    var Event:EventData?
+    var Events:[EventData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,17 +37,23 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         
         ref = Database.database().reference()
         
-      
-        refHandle = ref?.child("Events").child("Event1").observe(.value, with: { (snapshot) in
-            if let OvrData = snapshot.value as? [String : String] {
-                self.Event=EventData(Date: OvrData["Date"]!, Name: OvrData["Name"]!, Location: OvrData["Location"]!)
-                print("Check")
-            }
-            
-            
-//            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
-        })
+        for i in 1...3 {
+            refHandle = ref?.child("Events").child("Event\(i)").observe(.value, with: { (snapshot) in
+                if let OvrData = snapshot.value as? [String : String] {
+                    self.Events.append(EventData(Date: OvrData["Date"]!, Name: OvrData["Name"]!, Location: OvrData["Location"]!))
+                    self.EventTable.reloadData()
+                }
+            })
+        }
 
+        
+        
+
+//        refHandle = ref?.child("Events").child("Event1").observe(.value, with: { (snapshot) in
+//            if let OvrData = snapshot.value as? [String : String] {
+//                self.Event=EventData(Date: OvrData["Date"]!, Name: OvrData["Name"]!, Location: OvrData["Location"]!)
+//                print("Check")
+//            }
 
         // Do any additional setup after loading the view.
     }
