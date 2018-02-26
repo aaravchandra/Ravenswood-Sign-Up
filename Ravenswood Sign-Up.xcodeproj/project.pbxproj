@@ -50,6 +50,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5314DAC42043B0B500197A11 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				53CA1790201EBF8000018837 /* AppDelegate.swift */,
+				53CA179A201EBF8000018837 /* Assets.xcassets */,
+				53CA179C201EBF8000018837 /* LaunchScreen.storyboard */,
+				53B569DA2027EF9600929CF7 /* GoogleService-Info.plist */,
+				53CA1797201EBF8000018837 /* Ravenswood_Sign_Up.xcdatamodeld */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		53CA1784201EBF8000018837 = {
 			isa = PBXGroup;
 			children = (
@@ -71,15 +83,11 @@
 		53CA178F201EBF8000018837 /* Ravenswood Sign-Up */ = {
 			isa = PBXGroup;
 			children = (
-				53CA1790201EBF8000018837 /* AppDelegate.swift */,
 				53CA1792201EBF8000018837 /* VolunteerSignUpViewController.swift */,
 				53CA1794201EBF8000018837 /* Main.storyboard */,
-				53CA179A201EBF8000018837 /* Assets.xcassets */,
-				53CA179C201EBF8000018837 /* LaunchScreen.storyboard */,
-				53CA179F201EBF8000018837 /* Info.plist */,
-				53B569DA2027EF9600929CF7 /* GoogleService-Info.plist */,
-				53CA1797201EBF8000018837 /* Ravenswood_Sign_Up.xcdatamodeld */,
+				5314DAC42043B0B500197A11 /* Supporting Files */,
 				53B569DC202813ED00929CF7 /* EventTableViewController.swift */,
+				53CA179F201EBF8000018837 /* Info.plist */,
 				53B569DE20281D2000929CF7 /* EventData.swift */,
 				53594C0320368854000B383F /* EventTableViewCell.swift */,
 			);

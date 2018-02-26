@@ -25,7 +25,21 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         return cell
+        
+        
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat  {
+//        if indexPath.item==1 {
+//            return CGFloat(150)
+//
+//
+//        }
+//
+         return CGFloat(150)
+
+    }
+    
     
     var ref: DatabaseReference?
     var refHandle: DatabaseHandle?
@@ -33,8 +47,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-        
+    
         ref = Database.database().reference()
         
         for i in 1...3 {
@@ -67,6 +80,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         didSet {
             EventTable.dataSource=self
             EventTable.delegate=self
+            EventTable.separatorColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         }
     }
     
@@ -78,6 +92,12 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
+     
+     // ADDED CODE
+     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+     return 80
+     }
+     
     */
 
 }

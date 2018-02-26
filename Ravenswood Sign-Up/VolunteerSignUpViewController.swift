@@ -55,24 +55,18 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
     @IBAction func Submit(_ sender: UIButton) {
         
         // ADDED - Example write data
-        self.ref?.child("Users").child("User2").setValue(["Name": "Natya", "Email":"aaravc9@keysschool.org", "Phone":"650-274-4630"])
+        
         
         if let Name = NameField.text {
-            print("Name:\(Name)" )
+            if let TimeSlot = TimeSlotField.text {
+                let PhoneNumber = PhoneNumberField.text
+                let Email = EmailField.text
+                self.ref?.child("Events").child("Event1").child("Sign-Ups").child("User2").setValue(["Name": Name, "Email":Email, "Phone":PhoneNumber, "Time Slot":TimeSlot])
+            }
         }
         
-        if let Date = DateField.text {
-            print("Date:\(Date)" )
-        }
-        if let TimeSlot = TimeSlotField.text {
-            print("Time Slot:\(TimeSlot)" )
-        }
-        if let PhoneNumber = PhoneNumberField.text {
-            print("Phone Number:\(PhoneNumber)" )
-        }
-        if let Email = EmailField.text {
-            print("Email Address:\(Email)" )
-        }
+     
+        
     }
     
     // ADDED - reference vars

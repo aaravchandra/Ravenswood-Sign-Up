@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UfJ-Wq-dQb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4eV-N8-P3R">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -16,11 +16,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="VolunteerSignUpViewController" customModule="Ravenswood_Sign_Up" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OwF-2D-g9T">
-                                <rect key="frame" x="62" y="125" width="250" height="182"/>
+                                <rect key="frame" x="62" y="58.5" width="250" height="182"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2n-9z-qfw">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
@@ -68,7 +68,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loA-Vq-jIg">
-                                <rect key="frame" x="139.5" y="315" width="95" height="49"/>
+                                <rect key="frame" x="139.5" y="248.5" width="95" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Submit">
@@ -99,19 +99,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="288.80000000000001" y="33.733133433283363"/>
+            <point key="canvasLocation" x="2977" y="-609"/>
         </scene>
-        <!--Event Table View Controller-->
+        <!--Events Info-->
         <scene sceneID="hIn-45-4z3">
             <objects>
                 <viewController id="UfJ-Wq-dQb" customClass="EventTableViewController" customModule="Ravenswood_Sign_Up" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wgD-Ws-fzY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3OC-98-qGV">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3OC-98-qGV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventCell" rowHeight="80" id="TsP-WP-dMu" customClass="EventTableViewCell" customModule="Ravenswood_Sign_Up" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
@@ -163,9 +164,11 @@
                                             <outlet property="Date" destination="kVg-6G-eiX" id="Woy-Vx-Qmr"/>
                                             <outlet property="Location" destination="7lg-tP-faA" id="gWh-bw-lTw"/>
                                             <outlet property="Name" destination="svh-Jd-igt" id="Ntv-tu-Mi9"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="BZA-lX-1FB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -177,32 +180,118 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5db-uR-Gyi"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6Rd-jM-Tlm"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="AQx-td-J73"/>
+                    <navigationItem key="navigationItem" title="Events Info" id="6Rd-jM-Tlm"/>
                     <connections>
                         <outlet property="EventTable" destination="3OC-98-qGV" id="mRm-Zb-Jix"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wFa-yb-m1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="975.20000000000005" y="33.733133433283363"/>
+            <point key="canvasLocation" x="2263" y="-609"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="qkY-0b-Rxq">
+            <objects>
+                <tabBarController id="4eV-N8-P3R" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D82-TD-H9z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="EaR-Kv-GMj" kind="relationship" relationship="viewControllers" id="He9-SK-P6i"/>
+                        <segue destination="yrX-8k-NFh" kind="relationship" relationship="viewControllers" id="lfe-Zw-Deh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XKG-ox-67H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757" y="-1144"/>
+        </scene>
+        <!--Events-->
         <scene sceneID="oh1-9c-5fg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EaR-Kv-GMj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Events" id="X4N-DE-fXe"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tgw-EC-IcI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="tgw-EC-IcI">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jh0-Tb-fdm">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="UfJ-Wq-dQb" kind="relationship" relationship="rootViewController" id="2kj-bo-RFu"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ens-IA-wlF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2070" y="34"/>
+            <point key="canvasLocation" x="1543" y="-609"/>
+        </scene>
+        <!--About Ravenswood -->
+        <scene sceneID="67T-ft-opA">
+            <objects>
+                <viewController id="VdL-D4-hGJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MVK-xf-LXJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="About Image" translatesAutoresizingMaskIntoConstraints="NO" id="Wol-vx-Gjc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="j9h-QQ-KT0">
+                                <rect key="frame" x="50" y="114" width="275" height="454"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.60694028253424659" colorSpace="custom" customColorSpace="sRGB"/>
+                                <mutableString key="text">The Ravenswood City School District (RCSD) in San Mateo County is a unique academic environment that draws from the culturally rich communities of East Palo Alto and eastern Menlo Park. The ethnic make-up of the population is predominantly Hispanic (79%), African American (10%), Pacific Islander (9%) and other (2%).  RCSD serves some 4,200 students in kindergarten through eighth grades in eight schools that includes a child development center, one middle school, one dual immersion academy and five schools that include 6th through 8th grade. 
+
+The district has embarked upon an aggressive initiative to improve the educational opportunities provided for students and their families. ThisJourney to Excellence strives to improve the academic, social, and overall health and economic conditions for the entire Ravenswood community.
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="59L-Yg-PDR" firstAttribute="bottom" secondItem="Wol-vx-Gjc" secondAttribute="bottom" id="66S-FZ-aev"/>
+                            <constraint firstItem="59L-Yg-PDR" firstAttribute="bottom" secondItem="j9h-QQ-KT0" secondAttribute="bottom" constant="50" id="8z2-7O-wZN"/>
+                            <constraint firstItem="59L-Yg-PDR" firstAttribute="trailing" secondItem="j9h-QQ-KT0" secondAttribute="trailing" constant="50" id="AFD-vO-zkM"/>
+                            <constraint firstItem="59L-Yg-PDR" firstAttribute="trailing" secondItem="Wol-vx-Gjc" secondAttribute="trailing" id="Fh4-pt-BuT"/>
+                            <constraint firstItem="j9h-QQ-KT0" firstAttribute="top" secondItem="59L-Yg-PDR" secondAttribute="top" constant="50" id="Tm8-kd-oAb"/>
+                            <constraint firstItem="Wol-vx-Gjc" firstAttribute="leading" secondItem="59L-Yg-PDR" secondAttribute="leading" id="Y8N-ZQ-nEg"/>
+                            <constraint firstItem="j9h-QQ-KT0" firstAttribute="leading" secondItem="59L-Yg-PDR" secondAttribute="leading" constant="50" id="fan-b2-hKT"/>
+                            <constraint firstItem="Wol-vx-Gjc" firstAttribute="top" secondItem="59L-Yg-PDR" secondAttribute="top" id="hgG-7S-jpy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="59L-Yg-PDR"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About Ravenswood " id="X4J-OT-Vca"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TP0-oJ-3g6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2262" y="-1245"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="e9a-1R-0Mh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yrX-8k-NFh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="About" id="Bfh-PH-3eS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Nb-VZ-Lsb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VdL-D4-hGJ" kind="relationship" relationship="rootViewController" id="tj6-U9-v1C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z99-rA-ncT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1542" y="-1245"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="About Image" width="2735" height="1910"/>
+    </resources>
 </document>
