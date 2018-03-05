@@ -22,6 +22,9 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
             EventCell.Date.text = event.Date
             EventCell.Location.text = event.Location
             EventCell.Name.text = event.Name
+        
+            let Tap = UITapGestureRecognizer(target: self, action: #selector(TapGesture(_:)))
+            EventCell.addGestureRecognizer(Tap)
         }
         
         return cell
@@ -29,15 +32,35 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         
     }
     
+    @objc func TapGesture(_ sender: UITapGestureRecognizer) {
+     print("Working")
+        if let cell = sender.view as? EventTableViewCell{
+            performSegue(withIdentifier: "OvrSegue", sender: cell.Name.text)
+            print (cell.Name.text)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "OvrSegue"{
+            if let vc = segue.destination as? VolunteerSignUpViewController {
+                if let name = sender as? String {
+                    vc.NameOfEvent = name
+                    
+                }
+            }
+        }
+    }
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat  {
-//        if indexPath.item==1 {
-//            return CGFloat(150)
-//
-//
-//        }
-//
-         return CGFloat(150)
-
+        //        if indexPath.item==1 {
+        //            return CGFloat(150)
+        //
+        //
+        //        }
+        //
+        return CGFloat(150)
+        
     }
     
     
@@ -47,30 +70,21 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         ref = Database.database().reference()
         
         for i in 1...3 {
             refHandle = ref?.child("Events").child("Event\(i)").observe(.value, with: { (snapshot) in
-                if let OvrData = snapshot.value as? [String : String] {
-                    self.Events.append(EventData(Date: OvrData["Date"]!, Name: OvrData["Name"]!, Location: OvrData["Location"]!))
+                if let OvrData = snapshot.value as? [String : Any] {
+                    self.Events.append(EventData(Date: OvrData["Date"]! as! String, Name: OvrData["Name"]! as! String, Location: OvrData["Location"]! as! String))
                     self.EventTable.reloadData()
                 }
             })
         }
-
         
-        
-
-//        refHandle = ref?.child("Events").child("Event1").observe(.value, with: { (snapshot) in
-//            if let OvrData = snapshot.value as? [String : String] {
-//                self.Event=EventData(Date: OvrData["Date"]!, Name: OvrData["Name"]!, Location: OvrData["Location"]!)
-//                print("Check")
-//            }
-
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -85,19 +99,37 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
      
      // ADDED CODE
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
      return 80
      }
      
-    */
-
+     // MISCHA CODE TESTING
+     */
+//    refHandle = ref?.child("Events").observe(.value, with: { (snapshot) in
+//        if snapshot.childrenCount > 0 {
+//            for event in snapshot.children.allObjects as! [DataSnapshot] {
+//                if let eventObj = event.value as? [String:Any] {
+//                    if let date = eventObj["Date"] as? String, let location = eventObj["Location"] as? String, let name = eventObj["Name"] as? String {
+//                        let event = EventData(Date: date, Name: name, Location: location)
+//                        self.Events.append(event)
+//                    }
+//                    if let signupSnap = eventObj["Sign-Ups"] as? DataSnapshot {
+//                        print(signupSnap.childrenCount)
+//                    }
+//                }
+//            }
+//        }
+//        self.EventTable.reloadData()
+//    })
+    
+    
 }

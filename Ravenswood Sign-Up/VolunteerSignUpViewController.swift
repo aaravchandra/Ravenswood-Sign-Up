@@ -12,7 +12,15 @@ import Firebase
 import FirebaseDatabase
 
 class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
-
+    
+    var NameOfEvent: String?
+    
+    @IBOutlet weak var EventName: UILabel! {
+        didSet {
+            EventName.text=NameOfEvent
+        }
+    }
+    
     @IBOutlet weak var NameField: UITextField! {
         didSet { NameField.placeholder="Name"
             

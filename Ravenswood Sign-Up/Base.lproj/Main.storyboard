@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OwF-2D-g9T">
-                                <rect key="frame" x="62" y="58.5" width="250" height="182"/>
+                                <rect key="frame" x="62" y="59" width="250" height="182"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2n-9z-qfw">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
@@ -68,7 +68,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loA-Vq-jIg">
-                                <rect key="frame" x="139.5" y="248.5" width="95" height="49"/>
+                                <rect key="frame" x="140" y="249" width="95" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Submit">
@@ -79,12 +79,21 @@
                                     <action selector="Submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hKc-7Z-bXn"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aarav's Birthday Party" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgi-Ww-6mt">
+                                <rect key="frame" x="20" y="20" width="335" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.050645616319444448" green="0.61691623263888884" blue="0.85145399305555558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bgi-Ww-6mt" secondAttribute="trailing" constant="20" id="Czo-pr-WEM"/>
+                            <constraint firstItem="bgi-Ww-6mt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="TNc-n6-1aH"/>
                             <constraint firstItem="OwF-2D-g9T" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cjf-G2-Fek"/>
                             <constraint firstItem="loA-Vq-jIg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-4" id="fVG-16-00P"/>
                             <constraint firstItem="OwF-2D-g9T" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-127.5" id="iRo-xL-qpJ"/>
+                            <constraint firstItem="bgi-Ww-6mt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nZt-rA-2hW"/>
                             <constraint firstItem="loA-Vq-jIg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qoQ-qS-ISU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -92,6 +101,7 @@
                     <connections>
                         <outlet property="DateField" destination="0Ii-Yh-edO" id="zLC-FJ-hBW"/>
                         <outlet property="EmailField" destination="83f-50-2hL" id="Q6m-r5-mhL"/>
+                        <outlet property="EventName" destination="bgi-Ww-6mt" id="vuK-5O-aIk"/>
                         <outlet property="NameField" destination="g2n-9z-qfw" id="HCX-8s-JAr"/>
                         <outlet property="PhoneNumberField" destination="eW9-Ms-22T" id="Jpb-fN-TPD"/>
                         <outlet property="TimeSlotField" destination="kqe-zp-qvx" id="iwT-7s-tkd"/>
@@ -99,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2977" y="-609"/>
+            <point key="canvasLocation" x="2976.8000000000002" y="-609.44527736131943"/>
         </scene>
         <!--Events Info-->
         <scene sceneID="hIn-45-4z3">
@@ -164,7 +174,6 @@
                                             <outlet property="Date" destination="kVg-6G-eiX" id="Woy-Vx-Qmr"/>
                                             <outlet property="Location" destination="7lg-tP-faA" id="gWh-bw-lTw"/>
                                             <outlet property="Name" destination="svh-Jd-igt" id="Ntv-tu-Mi9"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="BZA-lX-1FB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -184,11 +193,12 @@
                     <navigationItem key="navigationItem" title="Events Info" id="6Rd-jM-Tlm"/>
                     <connections>
                         <outlet property="EventTable" destination="3OC-98-qGV" id="mRm-Zb-Jix"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="OvrSegue" id="sbM-Hx-mad"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wFa-yb-m1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2263" y="-609"/>
+            <point key="canvasLocation" x="2262" y="-609"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qkY-0b-Rxq">
@@ -244,10 +254,10 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="j9h-QQ-KT0">
                                 <rect key="frame" x="50" y="114" width="275" height="454"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.60694028253424659" colorSpace="custom" customColorSpace="sRGB"/>
-                                <mutableString key="text">The Ravenswood City School District (RCSD) in San Mateo County is a unique academic environment that draws from the culturally rich communities of East Palo Alto and eastern Menlo Park. The ethnic make-up of the population is predominantly Hispanic (79%), African American (10%), Pacific Islander (9%) and other (2%).  RCSD serves some 4,200 students in kindergarten through eighth grades in eight schools that includes a child development center, one middle school, one dual immersion academy and five schools that include 6th through 8th grade. 
+                                <string key="text">The Ravenswood City School District (RCSD) in San Mateo County is a unique academic environment that draws from the culturally rich communities of East Palo Alto and eastern Menlo Park. The ethnic make-up of the population is predominantly Hispanic (79%), African American (10%), Pacific Islander (9%) and other (2%).  RCSD serves some 4,200 students in kindergarten through eighth grades in eight schools that includes a child development center, one middle school, one dual immersion academy and five schools that include 6th through 8th grade. 
 
 The district has embarked upon an aggressive initiative to improve the educational opportunities provided for students and their families. ThisJourney to Excellence strives to improve the academic, social, and overall health and economic conditions for the entire Ravenswood community.
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
