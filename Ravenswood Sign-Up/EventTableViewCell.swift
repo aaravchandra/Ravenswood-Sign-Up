@@ -12,5 +12,5 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var Date: UILabel!
     @IBOutlet weak var Name: UILabel!
     @IBOutlet weak var Location: UILabel!
-  
+    var Data: EventData?
 }

@@ -14,7 +14,7 @@ import FirebaseDatabase
 class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
     
     var NameOfEvent: String?
-    
+    var NoofEvent: String?
     @IBOutlet weak var EventName: UILabel! {
         didSet {
             EventName.text=NameOfEvent
@@ -40,7 +40,10 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var TimeSlotField: UITextField! {
-        didSet { TimeSlotField.placeholder="Time Slot"}
+        didSet {
+            TimeSlotField.placeholder="Look Down For Time Slots"
+            TimeSlotField.isUserInteractionEnabled = false
+        }
     }
     
     @IBOutlet weak var PhoneNumberField: UITextField!{
@@ -69,7 +72,7 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
             if let TimeSlot = TimeSlotField.text {
                 let PhoneNumber = PhoneNumberField.text
                 let Email = EmailField.text
-                self.ref?.child("Events").child("Event1").child("Sign-Ups").child("User2").setValue(["Name": Name, "Email":Email, "Phone":PhoneNumber, "Time Slot":TimeSlot])
+                self.ref?.child("Events").child(NoofEvent!).child("Sign-Ups").child("User2").setValue(["Name": Name, "Email":Email, "Phone":PhoneNumber, "Time Slot":TimeSlot])
             }
         }
         
@@ -104,12 +107,17 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
             // ...
         })
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func Button4Action(_ sender: UIButton) {
     }
-
-
+    @IBAction func Button3Action(_ sender: UIButton) {
+    }
+    @IBAction func Button2Action(_ sender: UIButton) {
+    }
+    @IBAction func Button1Action(_ sender: UIButton) {
+    }
+    @IBOutlet weak var TimeButton1: UIButton!
+    @IBOutlet weak var TimeButton2: UIButton!
+    @IBOutlet weak var TimeButton3: UIButton!
+    @IBOutlet weak var TimeButton4: UIButton!
 }
 

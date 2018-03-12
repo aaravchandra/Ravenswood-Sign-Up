@@ -22,6 +22,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
             EventCell.Date.text = event.Date
             EventCell.Location.text = event.Location
             EventCell.Name.text = event.Name
+            EventCell.Data=event
         
             let Tap = UITapGestureRecognizer(target: self, action: #selector(TapGesture(_:)))
             EventCell.addGestureRecognizer(Tap)
@@ -33,19 +34,17 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @objc func TapGesture(_ sender: UITapGestureRecognizer) {
-     print("Working")
         if let cell = sender.view as? EventTableViewCell{
-            performSegue(withIdentifier: "OvrSegue", sender: cell.Name.text)
-            print (cell.Name.text)
+            performSegue(withIdentifier: "OvrSegue", sender:cell.Data!)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "OvrSegue"{
             if let vc = segue.destination as? VolunteerSignUpViewController {
-                if let name = sender as? String {
-                    vc.NameOfEvent = name
-                    
+                if let Data = sender as? EventData  {
+                    vc.NameOfEvent = Data.Name
+                    vc.NoofEvent = Data.Event
                 }
             }
         }
@@ -70,13 +69,14 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(Events)
         
         ref = Database.database().reference()
         
         for i in 1...3 {
             refHandle = ref?.child("Events").child("Event\(i)").observe(.value, with: { (snapshot) in
                 if let OvrData = snapshot.value as? [String : Any] {
-                    self.Events.append(EventData(Date: OvrData["Date"]! as! String, Name: OvrData["Name"]! as! String, Location: OvrData["Location"]! as! String))
+                    self.Events.append(EventData(Date: OvrData["Date"]! as! String, Name: OvrData["Name"]! as! String, Location: OvrData["Location"]! as! String, Event: "Event\(i)"))
                     self.EventTable.reloadData()
                 }
             })
