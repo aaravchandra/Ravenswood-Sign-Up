@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A38208E1B07AF6DB058C2E1 /* Pods_Ravenswood_Sign_Up.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78F1110E4147FADFE16FA93 /* Pods_Ravenswood_Sign_Up.framework */; };
 		53594C0420368854000B383F /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53594C0320368854000B383F /* EventTableViewCell.swift */; };
 		53B569DB2027EF9600929CF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53B569DA2027EF9600929CF7 /* GoogleService-Info.plist */; };
 		53B569DD202813ED00929CF7 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B569DC202813ED00929CF7 /* EventTableViewController.swift */; };
@@ -43,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A38208E1B07AF6DB058C2E1 /* Pods_Ravenswood_Sign_Up.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
