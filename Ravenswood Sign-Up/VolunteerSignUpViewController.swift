@@ -14,7 +14,8 @@ import FirebaseDatabase
 class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
     
     var NameOfEvent: String?
-    var NoofEvent: String?
+    var NoOfUsers:Int=0
+    //    var NoofEvent: String?
     @IBOutlet weak var EventName: UILabel! {
         didSet {
             EventName.text=NameOfEvent
@@ -49,7 +50,7 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var PhoneNumberField: UITextField!{
         didSet { PhoneNumberField.placeholder = "Phone Number - Optional"}
     }
-   
+    
     @IBOutlet weak var EmailField: UITextField!{
         didSet { EmailField.placeholder = "Email Address - Optional"}}
     
@@ -57,12 +58,12 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
         
         if let nextfield = textField.superview?.viewWithTag(textField.tag + 1 ) as? UITextField{
             nextfield.becomeFirstResponder()
-        
+            
         } else { textField.resignFirstResponder()}
         
         return false
     }
-
+    
     @IBAction func Submit(_ sender: UIButton) {
         
         // ADDED - Example write data
@@ -72,11 +73,28 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
             if let TimeSlot = TimeSlotField.text {
                 let PhoneNumber = PhoneNumberField.text
                 let Email = EmailField.text
-                self.ref?.child("Events").child(NoofEvent!).child("Sign-Ups").child("User2").setValue(["Name": Name, "Email":Email, "Phone":PhoneNumber, "Time Slot":TimeSlot])
+                
+                refHandle = ref?.child("Events").child(Name).observe(.value, with: { (snapshot) in
+                    let Info = snapshot.children.allObjects as! [DataSnapshot]
+                    for Data in Info {
+                        if (Data.key=="Sign-Ups"){
+                          let Users = Data.children.allObjects as![DataSnapshot]
+                            self.NoOfUsers = Users.count
+                            
+                        }
+                    }
+                    
+                    
+                })
+                
+                
+                
+                
+                self.ref?.child("Events").child(NameOfEvent!).child("Sign-Ups").child("User"+String(NoOfUsers)).setValue(["Name": Name, "Email":Email, "Phone":PhoneNumber, "Time Slot":TimeSlot])
             }
         }
         
-     
+        
         
     }
     
@@ -101,10 +119,17 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
         // ADDED - init reference
         ref = Database.database().reference()
         
-        // ADDED - template code for data listener
-        refHandle = ref?.child("users").observe(.childAdded, with: { (snapshot) in
-            //let postDict = snapshot.value as? [String : AnyObject] ?? [:]
-            // ...
+        refHandle = ref?.child("Events").child(NameOfEvent!).observe(.value, with: { (snapshot) in
+            let Info = snapshot.children.allObjects as! [DataSnapshot]
+            for Data in Info {
+                if (Data.key=="Sign-Ups"){
+                    let Users = Data.children.allObjects as![DataSnapshot]
+                    self.NoOfUsers = Users.count
+                    
+                }
+            }
+            
+            
         })
     }
     @IBAction func Button4Action(_ sender: UIButton) {

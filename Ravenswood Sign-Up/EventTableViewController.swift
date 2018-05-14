@@ -12,6 +12,7 @@ import FirebaseDatabase
 
 class EventTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+      
         return Events.count
     }
     
@@ -23,7 +24,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
             EventCell.Location.text = event.Location
             EventCell.Name.text = event.Name
             EventCell.Data=event
-        
+            
             let Tap = UITapGestureRecognizer(target: self, action: #selector(TapGesture(_:)))
             EventCell.addGestureRecognizer(Tap)
         }
@@ -44,7 +45,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
             if let vc = segue.destination as? VolunteerSignUpViewController {
                 if let Data = sender as? EventData  {
                     vc.NameOfEvent = Data.Name
-                    vc.NoofEvent = Data.Event
+                    //                    vc.NoofEvent = Data.Event
                 }
             }
         }
@@ -73,14 +74,47 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         
         ref = Database.database().reference()
         
-        for i in 1...3 {
-            refHandle = ref?.child("Events").child("Event\(i)").observe(.value, with: { (snapshot) in
-                if let OvrData = snapshot.value as? [String : Any] {
-                    self.Events.append(EventData(Date: OvrData["Date"]! as! String, Name: OvrData["Name"]! as! String, Location: OvrData["Location"]! as! String, Event: "Event\(i)"))
-                    self.EventTable.reloadData()
+        //        for i in 1...4
+        //        {
+        //            refHandle = ref?.child("Events").child("Event\(i)").observe(.value, with: { (snapshot) in
+        //                if let OvrData = snapshot.value as? [String : Any] {
+        //                    self.Events.append(EventData(Date: OvrData["Date"]! as! String, Name: OvrData["Name"]! as! String, Location: OvrData["Location"]! as! String, Event: "Event\(i)"))
+        //                    self.EventTable.reloadData()
+        //                }
+        //            })
+        //        }
+        
+        
+        
+        refHandle = ref?.child("Events").observe(.value, with: { (snapshot) in
+            self.Events=[];
+            
+            for info in snapshot.children.allObjects as! [DataSnapshot]{
+                let name = info.key;
+                if let OvrData = info.value as? NSDictionary {
+                   
+                    let date = OvrData["Date"]as!String;
+                    let location = OvrData["Location"]as!String;
+                  
+                    
+                    self.Events.append(EventData(Date: date, Name: name, Location: location));
+                    
+                    self.EventTable.reloadData();
+                    
+                    
                 }
-            })
-        }
+                
+               
+                
+
+                    
+                    
+                
+            }
+            
+        })
+        
+        
         
         // Do any additional setup after loading the view.
     }
@@ -114,22 +148,22 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
      
      // MISCHA CODE TESTING
      */
-//    refHandle = ref?.child("Events").observe(.value, with: { (snapshot) in
-//        if snapshot.childrenCount > 0 {
-//            for event in snapshot.children.allObjects as! [DataSnapshot] {
-//                if let eventObj = event.value as? [String:Any] {
-//                    if let date = eventObj["Date"] as? String, let location = eventObj["Location"] as? String, let name = eventObj["Name"] as? String {
-//                        let event = EventData(Date: date, Name: name, Location: location)
-//                        self.Events.append(event)
-//                    }
-//                    if let signupSnap = eventObj["Sign-Ups"] as? DataSnapshot {
-//                        print(signupSnap.childrenCount)
-//                    }
-//                }
-//            }
-//        }
-//        self.EventTable.reloadData()
-//    })
+    //    refHandle = ref?.child("Events").observe(.value, with: { (snapshot) in
+    //        if snapshot.childrenCount > 0 {
+    //            for event in snapshot.children.allObjects as! [DataSnapshot] {
+    //                if let eventObj = event.value as? [String:Any] {
+    //                    if let date = eventObj["Date"] as? String, let location = eventObj["Location"] as? String, let name = eventObj["Name"] as? String {
+    //                        let event = EventData(Date: date, Name: name, Location: location)
+    //                        self.Events.append(event)
+    //                    }
+    //                    if let signupSnap = eventObj["Sign-Ups"] as? DataSnapshot {
+    //                        print(signupSnap.childrenCount)
+    //                    }
+    //                }
+    //            }
+    //        }
+    //        self.EventTable.reloadData()
+    //    })
     
     
 }
