@@ -13,7 +13,7 @@ struct EventData{
     var Date:String
     var Name:String
     var Location:String
-    var Event:String
+//    var Event:String
     
     
 }

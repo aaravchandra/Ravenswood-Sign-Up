@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A38208E1B07AF6DB058C2E1 /* Pods_Ravenswood_Sign_Up.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78F1110E4147FADFE16FA93 /* Pods_Ravenswood_Sign_Up.framework */; };
 		53594C0420368854000B383F /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53594C0320368854000B383F /* EventTableViewCell.swift */; };
 		53B569DB2027EF9600929CF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53B569DA2027EF9600929CF7 /* GoogleService-Info.plist */; };
 		53B569DD202813ED00929CF7 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B569DC202813ED00929CF7 /* EventTableViewController.swift */; };
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A38208E1B07AF6DB058C2E1 /* Pods_Ravenswood_Sign_Up.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +123,6 @@
 				53CA178A201EBF8000018837 /* Frameworks */,
 				53CA178B201EBF8000018837 /* Resources */,
 				E76CD3C05937D8B1DB96E208 /* [CP] Embed Pods Frameworks */,
-				374B5F73BC5655088BB67A78 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,21 +182,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		374B5F73BC5655088BB67A78 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ravenswood Sign-Up/Pods-Ravenswood Sign-Up-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		95EE5A62967F6C256D8F704A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,14 +207,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Ravenswood Sign-Up/Pods-Ravenswood Sign-Up-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",

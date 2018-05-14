@@ -1,0 +1,6 @@
+framework module Pods_Ravenswood_Sign_Up {
+  umbrella header "Pods-Ravenswood Sign-Up-umbrella.h"
+
+  export *
+  module * { export * }
+}
