@@ -106,13 +106,13 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         NameField.delegate=self
         DateField.delegate=self
-        TimeSlotField.delegate=self
+//        TimeSlotField.delegate=self
         PhoneNumberField.delegate=self
         EmailField.delegate=self
         
         NameField.tag=1
         DateField.tag=2
-        TimeSlotField.tag=3
+//        TimeSlotField.tag=3
         PhoneNumberField.tag=4
         EmailField.tag=5
         
