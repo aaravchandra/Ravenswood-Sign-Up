@@ -13,6 +13,7 @@ import FirebaseDatabase
 class AdminCreateEventViewController: UIViewController, TimePickerDelegate {
     
     
+    var ButtonClicked : UIButton!
     
     
     
@@ -54,7 +55,6 @@ class AdminCreateEventViewController: UIViewController, TimePickerDelegate {
                 RepeatRecognition = true
                 self.SubmitButtonAdmin.isHidden = true
                 
-                
             }
             else {
                 if ( RepeatRecognition == false) {
@@ -69,7 +69,6 @@ class AdminCreateEventViewController: UIViewController, TimePickerDelegate {
     }
     
     @IBAction func SubmitPressed(_ sender: Any)
-        
     {
         
         var Name = NameFieldAdmin.text
@@ -84,6 +83,9 @@ class AdminCreateEventViewController: UIViewController, TimePickerDelegate {
     }
     
     
+    
+    
+    
     func TimePass(_ Time: Date?) {
         
         let formatter = DateFormatter()
@@ -91,7 +93,7 @@ class AdminCreateEventViewController: UIViewController, TimePickerDelegate {
         let myString = formatter.string(from: (Time as! Date) as Date)
         
         
-        TimeButton1.setTitle(myString, for: .normal)
+        ButtonClicked.setTitle(myString, for: .normal)
     }
    
     override func viewDidLoad(){
@@ -109,6 +111,13 @@ class AdminCreateEventViewController: UIViewController, TimePickerDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
     
+        var ButtonClickedTitle = (sender as! UIButton)
+        
+       
+        
+       ButtonClicked = ButtonClickedTitle
+        
+        
         if let vc = segue.destination as? TImePicker {
             vc.delegate=self
         }
