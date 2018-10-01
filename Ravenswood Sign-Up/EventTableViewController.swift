@@ -36,11 +36,12 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @objc func TapGesture(_ sender: UITapGestureRecognizer) {
         if let cell = sender.view as? EventTableViewCell{
-            performSegue(withIdentifier: "OvrSegue", sender:cell.Data!)
+            performSegue(withIdentifier: "Event Info", sender:cell.Data!)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
         if segue.identifier == "OvrSegue"{
             if let vc = segue.destination as? VolunteerSignUpViewController {
                 if let Data = sender as? EventData  {
@@ -49,20 +50,30 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                 }
             }
         }
-    }
-    
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat  {
-        //        if indexPath.item==1 {
-        //            return CGFloat(150)
-        //
-        //
-        //        }
-        //
-        return CGFloat(150)
+        
+        if segue.identifier == "Event Info"{
+            if let vc = segue.destination as? EventInfoViewController {
+                if let Data = sender as? EventData  {
+                    vc.Event = Data
+                    //                    vc.NoofEvent = Data.Event
+                }
+            }
+        }
         
     }
     
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat  {
+//        //        if indexPath.item==1 {
+//        //            return CGFloat(150)
+//        //
+//        //
+//        //        }
+//        //
+//        return CGFloat(100)
+//
+//    }
+//
     
     var ref: DatabaseReference?
     var refHandle: DatabaseHandle?
@@ -95,11 +106,20 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
                    
                     let date = OvrData["Date"]as!String;
                     let location = OvrData["Location"]as!String;
+                    let description = OvrData["Description"]as!String;
+                    let timeslots = OvrData["Timeslots"] as! NSArray;
+                    var TimeslotsString = ""
+                    print(timeslots)
                   
-                    
-                    self.Events.append(EventData(Date: date, Name: name, Location: location));
+                    for Time in timeslots {
+                        TimeslotsString += "\n" + (Time as!String)
+                    }
+
+                    self.Events.append(EventData(Date: date, Name: name, Location: location, Description: description, Timeslots: TimeslotsString));
                     
                     self.EventTable.reloadData();
+                    
+                   
                     
                     
                 }

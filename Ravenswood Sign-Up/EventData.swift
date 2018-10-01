@@ -13,6 +13,8 @@ struct EventData{
     var Date:String
     var Name:String
     var Location:String
+    var Description:String
+    var Timeslots: String
 //    var Event:String
     
     

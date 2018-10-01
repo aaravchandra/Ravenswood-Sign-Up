@@ -53,13 +53,13 @@ class AdminCreateEventViewController: UIViewController, TimePickerDelegate {
                 
                 self.NameRepeatWarning.isHidden=false
                 RepeatRecognition = true
-                self.SubmitButtonAdmin.isHidden = true
+//                self.SubmitButtonAdmin.isHidden = true
                 
             }
             else {
                 if ( RepeatRecognition == false) {
                     self.NameRepeatWarning.isHidden=true
-                    self.SubmitButtonAdmin.isHidden = false
+//                    self.SubmitButtonAdmin.isHidden = true
                 }
             }
             
@@ -71,7 +71,7 @@ class AdminCreateEventViewController: UIViewController, TimePickerDelegate {
     @IBAction func SubmitPressed(_ sender: Any)
     {
         
-        var Name = NameFieldAdmin.text
+        var Name = NameFieldAdmin.text 
         
         var Date = DateFieldAdmin.text
         
@@ -79,8 +79,14 @@ class AdminCreateEventViewController: UIViewController, TimePickerDelegate {
         
         var Description = DescriptionFieldAdmin.text
         
-        self.ref?.child("Events").child(Name!).setValue(["Date":Date,"Location":Location,"Description":Description])
+        if (Name != "" && Date != "" && Location != "") {
+            self.ref?.child("Events").child(Name!).setValue(["Date":Date,"Location":Location,"Description":Description])
+        
+        } else {
+            print("Good")
+        }
     }
+    
     
     
     
