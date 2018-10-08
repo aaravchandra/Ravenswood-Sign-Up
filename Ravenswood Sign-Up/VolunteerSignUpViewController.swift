@@ -24,8 +24,6 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var TimeButton3: UIButton!
     
-    @IBOutlet weak var TimeButton4: UIButton!
-    
     
     
     
@@ -143,7 +141,7 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
                 if (Data.key=="Timeslots") {
                     let timeslots = Data.value as! [String]
                     
-                    var ButtonArray = [self.TimeButton1, self.TimeButton2, self.TimeButton3, self.TimeButton4]
+                    var ButtonArray = [self.TimeButton1, self.TimeButton2, self.TimeButton3]
                     
                     for (index, time) in timeslots.enumerated() {
                         

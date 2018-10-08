@@ -116,40 +116,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fNb-4j-Sf9">
-                                <rect key="frame" x="71" y="361" width="244" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJQ-dJ-s2a">
-                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlL-Sn-J3f">
-                                        <rect key="frame" x="66" y="0.0" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JY-h0-iea">
-                                        <rect key="frame" x="132" y="0.0" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNb-sX-5wa">
-                                        <rect key="frame" x="198" y="0.0" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please click on a time slot below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vr2-sm-k29">
-                                <rect key="frame" x="65" y="310" width="247" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please click on a time slot below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vr2-sm-k29">
+                                <rect key="frame" x="65" y="310.5" width="246.5" height="20.5"/>
                                 <color key="backgroundColor" red="0.4128689236111111" green="0.43446180555555558" blue="0.41694991507222234" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fNb-4j-Sf9">
+                                <rect key="frame" x="15" y="356" width="345" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJQ-dJ-s2a">
+                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlL-Sn-J3f">
+                                        <rect key="frame" x="121.5" y="0.0" width="102" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JY-h0-iea">
+                                        <rect key="frame" x="243.5" y="0.0" width="101.5" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xit-1t-KI0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5Gn-ed-Edz"/>
+                            <constraint firstItem="vr2-sm-k29" firstAttribute="leading" secondItem="eBD-DE-hof" secondAttribute="leading" id="8pz-c2-zsb"/>
                             <constraint firstItem="xit-1t-KI0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="94j-Tb-VaQ"/>
+                            <constraint firstItem="fNb-4j-Sf9" firstAttribute="top" secondItem="vr2-sm-k29" secondAttribute="bottom" constant="25" id="BLe-tF-Jd9"/>
                             <constraint firstItem="xit-1t-KI0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CR0-c2-rJ1"/>
                             <constraint firstItem="OwF-2D-g9T" firstAttribute="top" secondItem="eBD-DE-hof" secondAttribute="bottom" constant="20" id="EQu-Ih-fxs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bgi-Ww-6mt" secondAttribute="trailing" constant="52.5" id="EaC-mJ-ebZ"/>
@@ -159,13 +155,16 @@
                             <constraint firstItem="loA-Vq-jIg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="Rjs-M2-zJU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OwF-2D-g9T" secondAttribute="trailing" constant="63" id="UGu-4X-OZP"/>
                             <constraint firstItem="xit-1t-KI0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="WEr-xO-wc4"/>
+                            <constraint firstItem="fNb-4j-Sf9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="XCR-YN-DW0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eBD-DE-hof" secondAttribute="trailing" constant="32" id="awk-K4-Pax"/>
+                            <constraint firstItem="loA-Vq-jIg" firstAttribute="top" secondItem="fNb-4j-Sf9" secondAttribute="bottom" constant="26" id="g8s-ng-z0j"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="loA-Vq-jIg" secondAttribute="bottom" constant="85" id="gs9-aE-wFe"/>
                             <constraint firstItem="eBD-DE-hof" firstAttribute="top" secondItem="bgi-Ww-6mt" secondAttribute="bottom" constant="24.5" id="hXT-BU-WoZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="loA-Vq-jIg" secondAttribute="trailing" constant="129" id="m7V-g2-dza"/>
                             <constraint firstItem="eBD-DE-hof" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="oZN-ek-WgF"/>
                             <constraint firstItem="eBD-DE-hof" firstAttribute="top" secondItem="bgi-Ww-6mt" secondAttribute="bottom" constant="24.5" id="tN6-n9-xxi"/>
                             <constraint firstItem="bgi-Ww-6mt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="yLw-In-Wpu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fNb-4j-Sf9" secondAttribute="trailing" constant="15" id="z6c-IP-bDU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -178,7 +177,6 @@
                         <outlet property="TimeButton1" destination="TJQ-dJ-s2a" id="1bc-Q2-fUx"/>
                         <outlet property="TimeButton2" destination="vlL-Sn-J3f" id="BC1-ic-OaQ"/>
                         <outlet property="TimeButton3" destination="2JY-h0-iea" id="T7M-OU-4nH"/>
-                        <outlet property="TimeButton4" destination="KNb-sX-5wa" id="KEk-AL-2fl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
