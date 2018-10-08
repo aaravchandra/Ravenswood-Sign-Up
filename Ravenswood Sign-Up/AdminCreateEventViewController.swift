@@ -34,8 +34,7 @@ class AdminCreateEventViewController: UIViewController, TimePickerDelegate {
     @IBOutlet weak var TimeButton2: UIButton!
     
     @IBOutlet weak var TimeButton3: UIButton!
-    
-    @IBOutlet weak var TimeButton4: UIButton!
+
     
     
     
@@ -71,16 +70,35 @@ class AdminCreateEventViewController: UIViewController, TimePickerDelegate {
     @IBAction func SubmitPressed(_ sender: Any)
     {
         
-        var Name = NameFieldAdmin.text 
+        let Name = NameFieldAdmin.text
         
-        var Date = DateFieldAdmin.text
+        let Date = DateFieldAdmin.text
         
-        var Location = LocationFieldAdmin.text
+        let Location = LocationFieldAdmin.text
         
-        var Description = DescriptionFieldAdmin.text
+        let Description = DescriptionFieldAdmin.text
+        
+        var Timeslots = [] as! [String]
+        
+        if (TimeButton1.titleLabel?.text != "Time") {
+
+            Timeslots.append((TimeButton1.titleLabel?.text)!)
+            
+        }
+            
+            if (TimeButton2.titleLabel?.text != "Time") {
+  
+                Timeslots.append((TimeButton2.titleLabel?.text)!)
+                
+        }
+                if (TimeButton3.titleLabel?.text != "Time") {
+                    
+              Timeslots.append((TimeButton3.titleLabel?.text)!)
+        }
+        
         
         if (Name != "" && Date != "" && Location != "") {
-            self.ref?.child("Events").child(Name!).setValue(["Date":Date,"Location":Location,"Description":Description])
+            self.ref?.child("Events").child(Name!).setValue(["Date":Date,"Location":Location,"Description":Description, "Timeslots":Timeslots])
         
         } else {
             print("Good")
