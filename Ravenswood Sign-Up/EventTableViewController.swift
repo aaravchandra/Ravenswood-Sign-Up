@@ -81,7 +81,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(Events)
+  
         
         ref = Database.database().reference()
         

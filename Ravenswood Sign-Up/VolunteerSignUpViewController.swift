@@ -16,6 +16,19 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
     var NameOfEvent: String?
     var NoOfUsers:Int=0
     //    var NoofEvent: String?
+   
+    
+    @IBOutlet weak var TimeButton1: UIButton!
+    
+    @IBOutlet weak var TimeButton2: UIButton!
+    
+    @IBOutlet weak var TimeButton3: UIButton!
+    
+    @IBOutlet weak var TimeButton4: UIButton!
+    
+    
+    
+    
     @IBOutlet weak var EventName: UILabel! {
         didSet {
             EventName.text=NameOfEvent
@@ -70,7 +83,6 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
         
         
         if let Name = NameField.text {
-            if let TimeSlot = TimeSlotField.text {
                 let PhoneNumber = PhoneNumberField.text
                 let Email = EmailField.text
                 
@@ -90,9 +102,9 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
                 
                 
                 
-                self.ref?.child("Events").child(NameOfEvent!).child("Sign-Ups").child("User"+String(NoOfUsers)).setValue(["Name": Name, "Email":Email, "Phone":PhoneNumber, "Time Slot":TimeSlot])
+                self.ref?.child("Events").child(NameOfEvent!).child("Sign-Ups").child("User"+String(NoOfUsers)).setValue(["Name": Name, "Email":Email, "Phone":PhoneNumber])
             }
-        }
+        
         
         
         
@@ -106,13 +118,11 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         NameField.delegate=self
         DateField.delegate=self
-//        TimeSlotField.delegate=self
         PhoneNumberField.delegate=self
         EmailField.delegate=self
         
         NameField.tag=1
         DateField.tag=2
-//        TimeSlotField.tag=3
         PhoneNumberField.tag=4
         EmailField.tag=5
         
@@ -126,23 +136,27 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
                     let Users = Data.children.allObjects as![DataSnapshot]
                     self.NoOfUsers = Users.count
                     
+                    
+                    
                 }
+                
+                if (Data.key=="Timeslots") {
+                    let timeslots = Data.value as! [String]
+                    
+                    var ButtonArray = [self.TimeButton1, self.TimeButton2, self.TimeButton3, self.TimeButton4]
+                    
+                    for (index, time) in timeslots.enumerated() {
+                        
+                        ButtonArray[index]?.setTitle(time, for: .normal)
+                        
+                        
+                        
+                    }
+                }
+                
             }
             
             
         })
     }
-    @IBAction func Button4Action(_ sender: UIButton) {
-    }
-    @IBAction func Button3Action(_ sender: UIButton) {
-    }
-    @IBAction func Button2Action(_ sender: UIButton) {
-    }
-    @IBAction func Button1Action(_ sender: UIButton) {
-    }
-    @IBOutlet weak var TimeButton1: UIButton!
-    @IBOutlet weak var TimeButton2: UIButton!
-    @IBOutlet weak var TimeButton3: UIButton!
-    @IBOutlet weak var TimeButton4: UIButton!
 }
-
