@@ -46,8 +46,7 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
-    @IBOutlet weak var DateField: UITextField! {
-        didSet { DateField.placeholder="Date"}}
+   
     
     
     
@@ -115,12 +114,10 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         NameField.delegate=self
-        DateField.delegate=self
         PhoneNumberField.delegate=self
         EmailField.delegate=self
         
         NameField.tag=1
-        DateField.tag=2
         PhoneNumberField.tag=4
         EmailField.tag=5
         

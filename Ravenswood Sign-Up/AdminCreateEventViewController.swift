@@ -12,7 +12,7 @@ import FirebaseDatabase
 
 class AdminCreateEventViewController: UIViewController, TimePickerDelegate {
     
-    
+//    var AllFieldsCompleted : Bool!
     var ButtonClicked : UIButton!
     
     
@@ -99,9 +99,12 @@ class AdminCreateEventViewController: UIViewController, TimePickerDelegate {
         
         if (Name != "" && Date != "" && Location != "") {
             self.ref?.child("Events").child(Name!).setValue(["Date":Date,"Location":Location,"Description":Description, "Timeslots":Timeslots])
-        
+//        AllFieldsCompleted = true
+      
         } else {
-            print("Good")
+            
+            print("good")
+//         AllFieldsCompleted =  false
         }
     }
     
@@ -134,10 +137,10 @@ class AdminCreateEventViewController: UIViewController, TimePickerDelegate {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-    
+   
         var ButtonClickedTitle = (sender as! UIButton)
         
-       
+    
         
        ButtonClicked = ButtonClickedTitle
         
@@ -145,7 +148,9 @@ class AdminCreateEventViewController: UIViewController, TimePickerDelegate {
         if let vc = segue.destination as? TImePicker {
             vc.delegate=self
         }
-        
+//        if let vc2 = segue.destination as? EventConfirmViewController {
+//            vc2.NotDone = !AllFieldsCompleted
+//        }
     }
     
     /*
@@ -158,4 +163,5 @@ class AdminCreateEventViewController: UIViewController, TimePickerDelegate {
      }
      */
     
+
 }
