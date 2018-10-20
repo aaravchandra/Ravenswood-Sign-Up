@@ -22,6 +22,7 @@
 		53CA1799201EBF8000018837 /* Ravenswood_Sign_Up.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 53CA1797201EBF8000018837 /* Ravenswood_Sign_Up.xcdatamodeld */; };
 		53CA179B201EBF8000018837 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53CA179A201EBF8000018837 /* Assets.xcassets */; };
 		53CA179E201EBF8000018837 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53CA179C201EBF8000018837 /* LaunchScreen.storyboard */; };
+		D957874E217BEB66002A4347 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D957874D217BEB66002A4347 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		53CA179D201EBF8000018837 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53CA179F201EBF8000018837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C78F1110E4147FADFE16FA93 /* Pods_Ravenswood_Sign_Up.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ravenswood_Sign_Up.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D957874D217BEB66002A4347 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		E7DCEBF0E94419AA971D862D /* Pods-Ravenswood Sign-Up.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ravenswood Sign-Up.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ravenswood Sign-Up/Pods-Ravenswood Sign-Up.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 				53CA179F201EBF8000018837 /* Info.plist */,
 				53B569DE20281D2000929CF7 /* EventData.swift */,
 				53594C0320368854000B383F /* EventTableViewCell.swift */,
+				D957874D217BEB66002A4347 /* SignInViewController.swift */,
 			);
 			path = "Ravenswood Sign-Up";
 			sourceTree = "<group>";
@@ -219,12 +222,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Ravenswood Sign-Up/Pods-Ravenswood Sign-Up-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -241,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D957874E217BEB66002A4347 /* SignInViewController.swift in Sources */,
 				111210EA21583D3400CE4B41 /* EventInfoViewController.swift in Sources */,
 				11A618E720D7484D0065AF2E /* TImePicker.swift in Sources */,
 				53594C0420368854000B383F /* EventTableViewCell.swift in Sources */,

@@ -8,4 +8,5 @@ target 'Ravenswood Sign-Up' do
   # Pods for Ravenswood Sign-Up
 	pod 'Firebase/Core'
 	pod 'Firebase/Database'
+	pod 'Firebase/Auth'
 end
