@@ -508,7 +508,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xkC-J4-lH3">
-                                <rect key="frame" x="9" y="124" width="300" height="210"/>
+                                <rect key="frame" x="9" y="80" width="300" height="210"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title (Required)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yYI-5w-S9V">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
@@ -557,19 +557,19 @@
                                 </constraints>
                             </stackView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*This Event Name Already Exists!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2O-K5-0SQ" colorLabel="IBBuiltInLabel-Red">
-                                <rect key="frame" x="9" y="92" width="214" height="17"/>
+                                <rect key="frame" x="9" y="48" width="214" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.19336274540000001" blue="0.043114944990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.0" green="1" blue="0.90713003660060387" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Time Slots Below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SD0-y0-oKL">
-                                <rect key="frame" x="107" y="392" width="161" height="20.5"/>
+                                <rect key="frame" x="107" y="348" width="161" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tzf-5e-pde">
-                                <rect key="frame" x="37" y="444" width="300" height="30"/>
+                                <rect key="frame" x="37" y="400" width="300" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="caL-Wi-1P5">
                                         <rect key="frame" x="0.0" y="0.0" width="93.5" height="30"/>
@@ -672,16 +672,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pTs-yJ-ESq">
-                                <rect key="frame" x="0.0" y="380" width="375" height="238"/>
+                                <rect key="frame" x="0.0" y="380" width="375" height="287"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1c-k7-6iz">
-                                        <rect key="frame" x="155" y="200" width="45" height="30"/>
+                                        <rect key="frame" x="155" y="249" width="45" height="30"/>
                                         <state key="normal" title="Delete">
                                             <color key="titleColor" red="0.067647822999999996" green="0.53229820049999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNj-An-bND">
-                                        <rect key="frame" x="260" y="200" width="55" height="30"/>
+                                        <rect key="frame" x="260" y="249" width="55" height="30"/>
                                         <state key="normal" title="Confirm">
                                             <color key="titleColor" red="0.067647822999999996" green="0.53229820049999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -690,7 +690,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLo-cm-SRW">
-                                        <rect key="frame" x="50" y="200" width="34" height="30"/>
+                                        <rect key="frame" x="50" y="249" width="34" height="30"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="0.067647822999999996" green="0.53229820049999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -699,7 +699,7 @@
                                         </connections>
                                     </button>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="hll-rE-X9y">
-                                        <rect key="frame" x="0.0" y="30" width="375" height="162"/>
+                                        <rect key="frame" x="0.0" y="30" width="375" height="211"/>
                                         <date key="date" timeIntervalSinceReferenceDate="550979087.49077296">
                                             <!--2018-06-18 01:44:47 +0000-->
                                         </date>
@@ -923,7 +923,7 @@ The district has embarked upon an aggressive initiative to improve the education
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="cIP-L4-Yno" kind="relationship" relationship="rootViewController" id="1Bz-Nu-AC6"/>
+                        <segue destination="kZt-kP-jo9" kind="relationship" relationship="rootViewController" id="VcV-CF-GiN"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sU2-A3-dMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -939,7 +939,7 @@ The district has embarked upon an aggressive initiative to improve the education
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="55K-78-SHx">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <prototypes>
@@ -1034,16 +1034,16 @@ The district has embarked upon an aggressive initiative to improve the education
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toy Drive" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfZ-yB-Q7l">
-                                <rect key="frame" x="75" y="70" width="225" height="20.5"/>
+                                <rect key="frame" x="75" y="114" width="225" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RvE-0h-fTB">
-                                <rect key="frame" x="0.0" y="140.5" width="375" height="426.5"/>
+                                <rect key="frame" x="0.0" y="184.5" width="375" height="333.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrj-Nw-95s">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="142"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="111"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -1051,7 +1051,7 @@ The district has embarked upon an aggressive initiative to improve the education
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcV-y2-GfL">
-                                        <rect key="frame" x="0.0" y="142" width="375" height="142.5"/>
+                                        <rect key="frame" x="0.0" y="111" width="375" height="111.5"/>
                                         <color key="backgroundColor" red="0.066666666669999999" green="0.4823529412" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -1059,7 +1059,7 @@ The district has embarked upon an aggressive initiative to improve the education
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8J-Kd-UfW">
-                                        <rect key="frame" x="0.0" y="284.5" width="375" height="142"/>
+                                        <rect key="frame" x="0.0" y="222.5" width="375" height="111"/>
                                         <color key="backgroundColor" red="0.0" green="0.33725490200000002" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
