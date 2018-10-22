@@ -10,6 +10,7 @@
 		0A38208E1B07AF6DB058C2E1 /* Pods_Ravenswood_Sign_Up.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78F1110E4147FADFE16FA93 /* Pods_Ravenswood_Sign_Up.framework */; };
 		1109D30A20B255FF003FC4A5 /* AdminCreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1109D30920B255FF003FC4A5 /* AdminCreateEventViewController.swift */; };
 		111210EA21583D3400CE4B41 /* EventInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111210E921583D3400CE4B41 /* EventInfoViewController.swift */; };
+		1114FDBF217D5D5C008B984C /* VolunteerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114FDBE217D5D5C008B984C /* VolunteerInfoViewController.swift */; };
 		11A618E720D7484D0065AF2E /* TImePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A618E620D7484C0065AF2E /* TImePicker.swift */; };
 		11E8CD512173DE7D00085596 /* EventConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E8CD502173DE7D00085596 /* EventConfirmViewController.swift */; };
 		53594C0420368854000B383F /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53594C0320368854000B383F /* EventTableViewCell.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		1109D30920B255FF003FC4A5 /* AdminCreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminCreateEventViewController.swift; sourceTree = "<group>"; };
 		111210E921583D3400CE4B41 /* EventInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoViewController.swift; sourceTree = "<group>"; };
+		1114FDBE217D5D5C008B984C /* VolunteerInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerInfoViewController.swift; sourceTree = "<group>"; };
 		11A618E620D7484C0065AF2E /* TImePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TImePicker.swift; sourceTree = "<group>"; };
 		11E8CD502173DE7D00085596 /* EventConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventConfirmViewController.swift; sourceTree = "<group>"; };
 		122BAC0BE19BF8013C582C97 /* Pods-Ravenswood Sign-Up.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ravenswood Sign-Up.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ravenswood Sign-Up/Pods-Ravenswood Sign-Up.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				53B569DE20281D2000929CF7 /* EventData.swift */,
 				53594C0320368854000B383F /* EventTableViewCell.swift */,
 				D957874D217BEB66002A4347 /* SignInViewController.swift */,
+				1114FDBE217D5D5C008B984C /* VolunteerInfoViewController.swift */,
 			);
 			path = "Ravenswood Sign-Up";
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				11A618E720D7484D0065AF2E /* TImePicker.swift in Sources */,
 				53594C0420368854000B383F /* EventTableViewCell.swift in Sources */,
 				1109D30A20B255FF003FC4A5 /* AdminCreateEventViewController.swift in Sources */,
+				1114FDBF217D5D5C008B984C /* VolunteerInfoViewController.swift in Sources */,
 				11E8CD512173DE7D00085596 /* EventConfirmViewController.swift in Sources */,
 				53CA1793201EBF8000018837 /* VolunteerSignUpViewController.swift in Sources */,
 				53CA1799201EBF8000018837 /* Ravenswood_Sign_Up.xcdatamodeld in Sources */,

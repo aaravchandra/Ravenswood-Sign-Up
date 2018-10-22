@@ -55,11 +55,18 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
             if let vc = segue.destination as? EventInfoViewController {
                 if let Data = sender as? EventData  {
                     vc.Event = Data
-                    //                    vc.NoofEvent = Data.Event
+                
                 }
             }
         }
-        
+        if segue.identifier == "Volunteer Info"{
+            if let vc = segue.destination as? VolunteerInfoViewController {
+                if let Data = sender as? EventData  {
+                    vc.Event = Data
+                   
+                }
+            }
+        }
     }
     
     
