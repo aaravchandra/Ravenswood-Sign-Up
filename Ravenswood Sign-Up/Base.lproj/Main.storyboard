@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -492,12 +493,12 @@
                         <outlet property="errorMessage" destination="nV8-8C-ckm" id="cHG-kf-Z3A"/>
                         <outlet property="userEmail" destination="crN-xp-gyk" id="JnB-o2-yBt"/>
                         <outlet property="userPassword" destination="WME-5b-2FG" id="dn7-XB-GSA"/>
-                        <segue destination="rUU-cC-anf" kind="show" identifier="goToHome" id="GE6-NH-an8"/>
+                        <segue destination="kZt-kP-jo9" kind="show" identifier="goToHome" id="cDD-a4-THj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMn-OI-9ez" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2317.5999999999999" y="-1934.4827586206898"/>
+            <point key="canvasLocation" x="2390" y="-1967"/>
         </scene>
         <!--AdminCreateEventPage-->
         <scene sceneID="Ya8-ed-WBx">
@@ -909,27 +910,6 @@ The district has embarked upon an aggressive initiative to improve the education
             </objects>
             <point key="canvasLocation" x="5519" y="-2275"/>
         </scene>
-        <!--Admin-->
-        <scene sceneID="ui4-UM-GEG">
-            <objects>
-                <navigationController id="rUU-cC-anf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Admin" id="3Te-vf-1db"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mms-rn-DsC">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.33725490200000002" blue="0.4823529412" alpha="0.58999999999999997" colorSpace="custom" customColorSpace="displayP3"/>
-                    </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L7S-Ek-XUm">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="kZt-kP-jo9" kind="relationship" relationship="rootViewController" id="VcV-CF-GiN"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sU2-A3-dMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3186" y="-1967"/>
-        </scene>
         <!--Events-->
         <scene sceneID="QF8-0S-iCC">
             <objects>
@@ -1033,17 +1013,17 @@ The district has embarked upon an aggressive initiative to improve the education
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toy Drive" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfZ-yB-Q7l">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toy Drive:__" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfZ-yB-Q7l">
                                 <rect key="frame" x="75" y="114" width="225" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RvE-0h-fTB">
-                                <rect key="frame" x="0.0" y="184.5" width="375" height="333.5"/>
+                                <rect key="frame" x="0.0" y="184" width="375" height="334"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrj-Nw-95s">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="111"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="111.5"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -1051,7 +1031,7 @@ The district has embarked upon an aggressive initiative to improve the education
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcV-y2-GfL">
-                                        <rect key="frame" x="0.0" y="111" width="375" height="111.5"/>
+                                        <rect key="frame" x="0.0" y="111.5" width="375" height="111"/>
                                         <color key="backgroundColor" red="0.066666666669999999" green="0.4823529412" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -1059,7 +1039,7 @@ The district has embarked upon an aggressive initiative to improve the education
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8J-Kd-UfW">
-                                        <rect key="frame" x="0.0" y="222.5" width="375" height="111"/>
+                                        <rect key="frame" x="0.0" y="222.5" width="375" height="111.5"/>
                                         <color key="backgroundColor" red="0.0" green="0.33725490200000002" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -1093,10 +1073,79 @@ The district has embarked upon an aggressive initiative to improve the education
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KrR-Vw-Y3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4837.6000000000004" y="-1585.4572713643179"/>
+            <point key="canvasLocation" x="4838" y="-1599"/>
+        </scene>
+        <!--People Info Table View Controller-->
+        <scene sceneID="Gxd-i3-I27">
+            <objects>
+                <tableViewController id="BkL-vw-jNP" customClass="PeopleInfoTableViewController" customModule="Ravenswood_Sign_Up" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9lz-76-Qd4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="110" id="xVJ-tj-T5J" customClass="PeopleInfoCell" customModule="Ravenswood_Sign_Up" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="110"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xVJ-tj-T5J" id="DA4-wj-SyD">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3KX-Aj-fei">
+                                            <rect key="frame" x="91" y="16" width="218" height="78"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSq-uv-DhR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="218" height="26"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBF-F0-NTb">
+                                                    <rect key="frame" x="0.0" y="26" width="218" height="26"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWn-vs-zCv">
+                                                    <rect key="frame" x="0.0" y="52" width="218" height="26"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2005172-200" translatesAutoresizingMaskIntoConstraints="NO" id="aBg-At-6Qh">
+                                            <rect key="frame" x="0.0" y="11" width="83" height="88"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3KX-Aj-fei" firstAttribute="top" secondItem="DA4-wj-SyD" secondAttribute="topMargin" constant="5" id="UBg-Pf-5nZ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="3KX-Aj-fei" secondAttribute="trailing" constant="50" id="hMs-AL-Nh5"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="3KX-Aj-fei" secondAttribute="bottom" constant="5" id="ml3-oQ-mVr"/>
+                                        <constraint firstItem="3KX-Aj-fei" firstAttribute="leading" secondItem="DA4-wj-SyD" secondAttribute="leadingMargin" constant="75" id="ovZ-LT-AOw"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="PersonEmail" destination="IBF-F0-NTb" id="3WD-Sx-bhP"/>
+                                    <outlet property="PersonName" destination="rSq-uv-DhR" id="rqI-wY-sIb"/>
+                                    <outlet property="PersonPhone" destination="VWn-vs-zCv" id="CVD-hP-LNy"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BkL-vw-jNP" id="hNd-kP-tx3"/>
+                            <outlet property="delegate" destination="BkL-vw-jNP" id="3wL-jt-iAm"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cia-JC-UeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5508" y="-1600"/>
         </scene>
     </scenes>
     <resources>
+        <image name="2005172-200" width="100" height="100"/>
         <image name="60390_full" width="320" height="213"/>
         <image name="About Image" width="2735" height="1910"/>
         <image name="cat_icon_sme" width="130" height="130"/>
