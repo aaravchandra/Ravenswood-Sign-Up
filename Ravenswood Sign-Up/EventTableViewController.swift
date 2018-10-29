@@ -36,7 +36,15 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @objc func TapGesture(_ sender: UITapGestureRecognizer) {
         if let cell = sender.view as? EventTableViewCell{
-            performSegue(withIdentifier: "Event Info", sender:cell.Data!)
+        
+            if (self.tabBarController?.selectedIndex==0){
+                  performSegue(withIdentifier: "Event Info", sender:cell.Data!)
+            }
+            if (self.tabBarController?.selectedIndex==2){
+                performSegue(withIdentifier: "Volunteer Info", sender:cell.Data!)
+            }
+          
+            
         }
     }
     
