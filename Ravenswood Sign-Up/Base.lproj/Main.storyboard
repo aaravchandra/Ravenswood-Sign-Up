@@ -29,6 +29,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2n-9z-qfw">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
@@ -43,6 +44,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number-Optional" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eW9-Ms-22T">
                                         <rect key="frame" x="0.0" y="38" width="250" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
@@ -54,6 +56,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address-Optional" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="83f-50-2hL">
                                         <rect key="frame" x="0.0" y="76" width="250" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
@@ -416,6 +419,7 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="crN-xp-gyk">
                                         <rect key="frame" x="20" y="0.0" width="335" height="45"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="3yK-44-vMI"/>
                                         </constraints>
@@ -425,7 +429,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WME-5b-2FG">
                                         <rect key="frame" x="20" y="53" width="335" height="45"/>
-                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="sF3-0I-E1k"/>
                                         </constraints>
@@ -488,17 +492,88 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="36o-6Q-lBH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="gWl-Bi-ER5"/>
+                    <navigationItem key="navigationItem" title="Admin Sign-In" id="gWl-Bi-ER5"/>
                     <connections>
                         <outlet property="errorMessage" destination="nV8-8C-ckm" id="cHG-kf-Z3A"/>
                         <outlet property="userEmail" destination="crN-xp-gyk" id="JnB-o2-yBt"/>
                         <outlet property="userPassword" destination="WME-5b-2FG" id="dn7-XB-GSA"/>
-                        <segue destination="kZt-kP-jo9" kind="show" identifier="goToHome" id="cDD-a4-THj"/>
+                        <segue destination="eeT-ZP-W7H" kind="show" identifier="goToHome" id="cpd-s8-PNJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMn-OI-9ez" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2390" y="-1967"/>
+            <point key="canvasLocation" x="2428" y="-1991"/>
+        </scene>
+        <!--Admin Home-->
+        <scene sceneID="P1b-1l-i1A">
+            <objects>
+                <viewController restorationIdentifier="Admin Home" storyboardIdentifier="AdminHome" title="Admin Home" id="eeT-ZP-W7H" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7SW-zf-WAf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="p0d-8c-xp0">
+                                <rect key="frame" x="20" y="189" width="335" height="379"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTT-JB-fgb">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="126.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Create Event"/>
+                                        <connections>
+                                            <action selector="Button1Pressed:" destination="GHs-2B-GXW" eventType="touchUpInside" id="SIL-5X-Oo8"/>
+                                            <segue destination="cIP-L4-Yno" kind="show" identifier="AdminCreateEvent" id="nEZ-vY-cuA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKs-qs-GWI">
+                                        <rect key="frame" x="0.0" y="126.5" width="335" height="126"/>
+                                        <color key="backgroundColor" red="0.066666666669999999" green="0.4823529412" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="View Sign-Up Information"/>
+                                        <connections>
+                                            <action selector="Button2Pressed:" destination="GHs-2B-GXW" eventType="touchUpInside" id="eYh-9N-oTc"/>
+                                            <segue destination="kZt-kP-jo9" kind="show" identifier="AdminVolunteerInfo" id="voW-Bl-XFW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wf9-hG-jcW">
+                                        <rect key="frame" x="0.0" y="252.5" width="335" height="126.5"/>
+                                        <color key="backgroundColor" red="0.0" green="0.33725490200000002" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Register New Admin"/>
+                                        <connections>
+                                            <action selector="Button3Pressed:" destination="GHs-2B-GXW" eventType="touchUpInside" id="PDD-jK-Tvc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2E9-oF-yN1">
+                                <rect key="frame" x="166" y="74" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please click on the buttons below to either Create a Event, View Sign-Up Information or Register a New Admin" textAlignment="center" lineBreakMode="clip" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVH-KY-RLy">
+                                <rect key="frame" x="5" y="94" width="365" height="75"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FVH-KY-RLy" firstAttribute="leading" secondItem="5tw-Xa-Xpb" secondAttribute="leading" constant="5" id="CCh-dA-1sx"/>
+                            <constraint firstItem="p0d-8c-xp0" firstAttribute="leading" secondItem="5tw-Xa-Xpb" secondAttribute="leading" constant="20" id="Jxy-nC-wJV"/>
+                            <constraint firstItem="p0d-8c-xp0" firstAttribute="top" secondItem="FVH-KY-RLy" secondAttribute="bottom" constant="20" id="PNU-kY-YV4"/>
+                            <constraint firstItem="5tw-Xa-Xpb" firstAttribute="bottom" secondItem="p0d-8c-xp0" secondAttribute="bottom" constant="50" id="aR0-P6-lD2"/>
+                            <constraint firstItem="FVH-KY-RLy" firstAttribute="top" secondItem="5tw-Xa-Xpb" secondAttribute="top" constant="30" id="d6E-mu-MVf"/>
+                            <constraint firstAttribute="trailing" secondItem="FVH-KY-RLy" secondAttribute="trailing" constant="5" id="eY4-e6-Nbl"/>
+                            <constraint firstItem="5tw-Xa-Xpb" firstAttribute="trailing" secondItem="p0d-8c-xp0" secondAttribute="trailing" constant="20" id="v6q-vy-X9D"/>
+                            <constraint firstItem="p0d-8c-xp0" firstAttribute="top" secondItem="5tw-Xa-Xpb" secondAttribute="top" constant="125" id="xGw-5I-dbg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5tw-Xa-Xpb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X0V-FL-SWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3232.8000000000002" y="-2040.6296851574214"/>
         </scene>
         <!--AdminCreateEventPage-->
         <scene sceneID="Ya8-ed-WBx">
@@ -509,10 +584,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xkC-J4-lH3">
-                                <rect key="frame" x="9" y="80" width="300" height="210"/>
+                                <rect key="frame" x="9" y="124" width="300" height="210"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title (Required)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yYI-5w-S9V">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -523,6 +599,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date (Required)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0BE-rV-Vox">
                                         <rect key="frame" x="0.0" y="45" width="300" height="30"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -532,6 +609,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location (Required)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YQx-v0-WlB">
                                         <rect key="frame" x="0.0" y="90" width="300" height="30"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -541,6 +619,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Description (Optional)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n28-sO-4Bw">
                                         <rect key="frame" x="0.0" y="135" width="300" height="75"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="0Ds-9v-ezU"/>
                                         </constraints>
@@ -558,19 +637,19 @@
                                 </constraints>
                             </stackView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*This Event Name Already Exists!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2O-K5-0SQ" colorLabel="IBBuiltInLabel-Red">
-                                <rect key="frame" x="9" y="48" width="214" height="17"/>
+                                <rect key="frame" x="9" y="92" width="214" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.19336274540000001" blue="0.043114944990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.0" green="1" blue="0.90713003660060387" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Time Slots Below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SD0-y0-oKL">
-                                <rect key="frame" x="107" y="348" width="161" height="20.5"/>
+                                <rect key="frame" x="107" y="392" width="161" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tzf-5e-pde">
-                                <rect key="frame" x="37" y="400" width="300" height="30"/>
+                                <rect key="frame" x="37" y="444" width="300" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="caL-Wi-1P5">
                                         <rect key="frame" x="0.0" y="0.0" width="93.5" height="30"/>
@@ -673,16 +752,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pTs-yJ-ESq">
-                                <rect key="frame" x="0.0" y="380" width="375" height="287"/>
+                                <rect key="frame" x="0.0" y="380" width="375" height="238"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1c-k7-6iz">
-                                        <rect key="frame" x="155" y="249" width="45" height="30"/>
+                                        <rect key="frame" x="155" y="200" width="45" height="30"/>
                                         <state key="normal" title="Delete">
                                             <color key="titleColor" red="0.067647822999999996" green="0.53229820049999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNj-An-bND">
-                                        <rect key="frame" x="260" y="249" width="55" height="30"/>
+                                        <rect key="frame" x="260" y="200" width="55" height="30"/>
                                         <state key="normal" title="Confirm">
                                             <color key="titleColor" red="0.067647822999999996" green="0.53229820049999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -691,7 +770,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLo-cm-SRW">
-                                        <rect key="frame" x="50" y="249" width="34" height="30"/>
+                                        <rect key="frame" x="50" y="200" width="34" height="30"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="0.067647822999999996" green="0.53229820049999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -700,7 +779,7 @@
                                         </connections>
                                     </button>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="hll-rE-X9y">
-                                        <rect key="frame" x="0.0" y="30" width="375" height="211"/>
+                                        <rect key="frame" x="0.0" y="30" width="375" height="162"/>
                                         <date key="date" timeIntervalSinceReferenceDate="550979087.49077296">
                                             <!--2018-06-18 01:44:47 +0000-->
                                         </date>
