@@ -120,14 +120,23 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJQ-dJ-s2a">
                                         <rect key="frame" x="0.0" y="0.0" width="101.5" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="TimeButton1Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KP8-ys-H9i"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlL-Sn-J3f">
                                         <rect key="frame" x="121.5" y="0.0" width="102" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="TimeButton2Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rj1-4q-EIu"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JY-h0-iea">
                                         <rect key="frame" x="243.5" y="0.0" width="101.5" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="TimeButton3Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rKm-yp-hGH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

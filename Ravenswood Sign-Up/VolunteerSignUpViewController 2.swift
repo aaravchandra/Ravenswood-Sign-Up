@@ -39,34 +39,6 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
-    
-    @IBAction func TimeButton1Pressed(_ sender: UIButton) {
-        
-        
-        sender.backgroundColor = UIColor.yellow
-        sender.setTitleColor(UIColor.black, for: .normal
-        )
-        
-    }
-    
-    @IBAction func TimeButton2Pressed(_ sender: UIButton) {
-        
-        sender.backgroundColor = UIColor.yellow
-        sender.setTitleColor(UIColor.black, for: .normal
-        )
-        
-    }
-    
-    @IBAction func TimeButton3Pressed(_ sender: UIButton) {
-        
-        
-        sender.backgroundColor = UIColor.yellow
-        sender.setTitleColor(UIColor.black, for: .normal
-        )
-        
-    }
-    
-    
     @IBAction func NameTyped(_ sender: UITextField) {
         if let Name = sender.text {
             print(Name)
@@ -75,7 +47,6 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
         
     }
    
-    
     
     
     @IBOutlet weak var TimeSlotField: UITextField! {
