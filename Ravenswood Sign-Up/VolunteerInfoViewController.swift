@@ -29,10 +29,12 @@ class VolunteerInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
         
         NameofEvent.text = (Event?.Name)! + ": Number of Volunteers =" // + amount of sign ups
         
         refHandle = ref?.child("Events").child((Event?.Name)!).observe(.value, with: { (snapshot) in
+            print(snapshot)
             var timeslots = snapshot.childSnapshot(forPath: "Timeslots")
      
             for time in timeslots.value as! [String]{
@@ -41,7 +43,7 @@ class VolunteerInfoViewController: UIViewController {
                 
                 
             }
-                
+            
         })
         
     }
