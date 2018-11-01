@@ -70,7 +70,7 @@ class EventTableViewController: UIViewController, UITableViewDelegate, UITableVi
         if segue.identifier == "Volunteer Info"{
             if let vc = segue.destination as? VolunteerInfoViewController {
                 if let Data = sender as? EventData  {
-                    //vc.Event = Data
+                    vc.Event = Data
                    
                 }
             }

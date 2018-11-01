@@ -12,7 +12,7 @@ import Firebase
 
 class VolunteerInfoViewController: UIViewController {
 
-    //var Event: EventData?
+    var Event: EventData?
     
     
     @IBOutlet weak var NameofEvent: UILabel!
@@ -23,26 +23,28 @@ class VolunteerInfoViewController: UIViewController {
     
     @IBOutlet weak var Button3: UIButton!
     
-//    var ref: DatabaseReference?
-//    var refHandle: DatabaseHandle?
+    var ref: DatabaseReference?
+    var refHandle: DatabaseHandle?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
         
-//        NameofEvent.text = (Event?.Name)! + ": Number of Volunteers =" // + amount of sign ups
-//        
-//        refHandle = ref?.child("Events").child((Event?.Name)!).observe(.value, with: { (snapshot) in
-//            var timeslots = snapshot.childSnapshot(forPath: "Timeslots")
-//     
-//            for time in timeslots.value as! [String]{
-//        
-//                print (time)
-//                
-//                
-//            }
-//                
-//        })
+        NameofEvent.text = (Event?.Name)! + ": Number of Volunteers =" // + amount of sign ups
+        
+        refHandle = ref?.child("Events").child((Event?.Name)!).observe(.value, with: { (snapshot) in
+            print(snapshot)
+            var timeslots = snapshot.childSnapshot(forPath: "Timeslots")
+     
+            for time in timeslots.value as! [String]{
+        
+                print (time)
+                
+                
+            }
+            
+        })
         
     }
 
