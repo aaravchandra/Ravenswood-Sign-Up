@@ -25,6 +25,7 @@
 		53CA1799201EBF8000018837 /* Ravenswood_Sign_Up.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 53CA1797201EBF8000018837 /* Ravenswood_Sign_Up.xcdatamodeld */; };
 		53CA179B201EBF8000018837 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53CA179A201EBF8000018837 /* Assets.xcassets */; };
 		53CA179E201EBF8000018837 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53CA179C201EBF8000018837 /* LaunchScreen.storyboard */; };
+		D90E62A1218AB16900240235 /* RegisterNewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90E62A0218AB16900240235 /* RegisterNewUser.swift */; };
 		D957874E217BEB66002A4347 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D957874D217BEB66002A4347 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		53CA179D201EBF8000018837 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53CA179F201EBF8000018837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C78F1110E4147FADFE16FA93 /* Pods_Ravenswood_Sign_Up.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ravenswood_Sign_Up.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90E62A0218AB16900240235 /* RegisterNewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNewUser.swift; sourceTree = "<group>"; };
 		D957874D217BEB66002A4347 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		E7DCEBF0E94419AA971D862D /* Pods-Ravenswood Sign-Up.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ravenswood Sign-Up.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ravenswood Sign-Up/Pods-Ravenswood Sign-Up.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 				1114FDBE217D5D5C008B984C /* VolunteerInfoViewController.swift */,
 				116B06552186984C0088FDE8 /* PeopleInfoCell.swift */,
 				116B0657218699310088FDE8 /* PeopleInfoTableViewController.swift */,
+				D90E62A0218AB16900240235 /* RegisterNewUser.swift */,
 			);
 			path = "Ravenswood Sign-Up";
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				53CA1793201EBF8000018837 /* VolunteerSignUpViewController.swift in Sources */,
 				53CA1799201EBF8000018837 /* Ravenswood_Sign_Up.xcdatamodeld in Sources */,
 				116B06562186984C0088FDE8 /* PeopleInfoCell.swift in Sources */,
+				D90E62A1218AB16900240235 /* RegisterNewUser.swift in Sources */,
 				53B569DF20281D2000929CF7 /* EventData.swift in Sources */,
 				53B569DD202813ED00929CF7 /* EventTableViewController.swift in Sources */,
 				53CA1791201EBF8000018837 /* AppDelegate.swift in Sources */,
