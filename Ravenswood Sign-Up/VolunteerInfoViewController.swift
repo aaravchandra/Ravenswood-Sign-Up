@@ -31,17 +31,42 @@ class VolunteerInfoViewController: UIViewController {
         super.viewDidLoad()
         ref = Database.database().reference()
         
-        NameofEvent.text = (Event?.Name)! + ": Number of Volunteers =" // + amount of sign ups
+        var TimeArray = [Button1,Button2,Button3]
+        
+        
+       
         
         refHandle = ref?.child("Events").child((Event?.Name)!).observe(.value, with: { (snapshot) in
-            print(snapshot)
-            var timeslots = snapshot.childSnapshot(forPath: "Timeslots")
-     
-            for time in timeslots.value as! [String]{
         
-                print (time)
+            var timeslots = snapshot.childSnapshot(forPath: "Timeslots")
+            var VolunteersInfo = snapshot.childSnapshot(forPath: "Sign-Ups")
+            
+            if VolunteersInfo.exists() {
+                self.NameofEvent.text = (self.Event?.Name)! + ":" + "0"
+            }
+            else {
+          var NoOfSignUps = VolunteersInfo.value as! NSDictionary
+            
+            self.NameofEvent.text = (self.Event?.Name)! + ":" + String (NoOfSignUps.count)  // + amount of sign ups
+            
+            }
+                var TimeCount = 0
+            
+            
+            for time in timeslots.value as! [String]{
+    
+              
+                TimeArray[TimeCount]?.setTitle(time, for: .normal)
                 
+     TimeCount = TimeCount+1
+            }
+         
+            
+            
+            while TimeCount < 3 {
                 
+                TimeArray[TimeCount]?.setTitle("Sorry, no time here", for: .normal)
+             TimeCount = TimeCount+1
             }
             
         })
