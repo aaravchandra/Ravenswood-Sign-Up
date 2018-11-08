@@ -106,12 +106,12 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
         
         // ADDED - Example write data
         
-        
-        if let Name = NameField.text {
+        let Name = NameField.text
+        if !(Name?.isEmpty)! {
                 let PhoneNumber = PhoneNumberField.text
                 let Email = EmailField.text
                 
-                refHandle = ref?.child("Events").child(Name).observe(.value, with: { (snapshot) in
+            refHandle = ref?.child("Events").child(Name!).observe(.value, with: { (snapshot) in
                     let Info = snapshot.children.allObjects as! [DataSnapshot]
                     for Data in Info {
                         if (Data.key=="Sign-Ups"){

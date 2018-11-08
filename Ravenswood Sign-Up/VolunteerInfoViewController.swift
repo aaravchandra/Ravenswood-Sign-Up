@@ -40,8 +40,9 @@ class VolunteerInfoViewController: UIViewController {
         
             var timeslots = snapshot.childSnapshot(forPath: "Timeslots")
             var VolunteersInfo = snapshot.childSnapshot(forPath: "Sign-Ups")
+
             
-            if VolunteersInfo.exists() {
+            if !VolunteersInfo.exists() {
                 self.NameofEvent.text = (self.Event?.Name)! + ":" + "0"
             }
             else {
