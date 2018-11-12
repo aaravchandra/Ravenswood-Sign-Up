@@ -11,7 +11,7 @@ import Firebase
 import FirebaseAuth
 
 class SignInViewController: UIViewController {
-
+    var LogInPressed: Bool?
     @IBOutlet weak var userEmail: UITextField!
     @IBOutlet weak var userPassword: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
@@ -20,6 +20,8 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        LogInPressed=false
+        
 
         // Do any additional setup after loading the view.
     }
@@ -28,8 +30,11 @@ class SignInViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+  
     @IBAction func signInPressed(_ sender: UIButton) {
+        
+        if (LogInPressed == false) {
+            LogInPressed = true
         if (!(userEmail.text?.isEmpty)! && !(userPassword.text?.isEmpty)!){
             Auth.auth().signIn(withEmail: userEmail.text!, password: userPassword.text!) { (user, error) in
                 
@@ -49,16 +54,12 @@ class SignInViewController: UIViewController {
             errorMessage.text = "*Please fill out all fields."
             errorMessage.isHidden = false;
         }
+        }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+       LogInPressed = false
     }
-    */
+   
 
 }

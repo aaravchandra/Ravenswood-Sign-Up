@@ -11,18 +11,21 @@ import Firebase
 import FirebaseAuth
 
 class RegisterNewUser: UIViewController {
-
+    var RegisterPressed: Bool?
     @IBOutlet weak var errorMessage: UILabel!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+          RegisterPressed = false
 
         // Do any additional setup after loading the view.
     }
 
     @IBAction func RegisterUser(_ sender: UIButton) {
+        if (RegisterPressed == false) {
+        RegisterPressed = true
         if (!(emailField.text?.isEmpty)! && !(passwordField.text?.isEmpty)!){
             Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { (user, error) in
                 
@@ -42,6 +45,7 @@ class RegisterNewUser: UIViewController {
             errorMessage.text = "*Please fill out all fields."
             errorMessage.isHidden = false;
         }
+        }
     }
     
     
@@ -52,14 +56,18 @@ class RegisterNewUser: UIViewController {
     }
     
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        RegisterPressed = false
+        
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
