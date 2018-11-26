@@ -44,7 +44,7 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
         
         
         if (sender.backgroundColor == UIColor.yellow) {
-            sender.backgroundColor = UIColor.clear
+            sender.backgroundColor = UIColor.gray
             sender.setTitleColor(UIColor.white, for: .normal)
         }
         
@@ -60,7 +60,7 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
     @IBAction func TimeButton2Pressed(_ sender: UIButton) {
         
         if (sender.backgroundColor == UIColor.yellow) {
-            sender.backgroundColor = UIColor.clear
+            sender.backgroundColor = UIColor.gray
             sender.setTitleColor(UIColor.white, for: .normal)
         }
             
@@ -77,7 +77,7 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
         
         
         if (sender.backgroundColor == UIColor.yellow) {
-            sender.backgroundColor = UIColor.clear
+            sender.backgroundColor = UIColor.gray
             sender.setTitleColor(UIColor.white, for: .normal)
         }
             
