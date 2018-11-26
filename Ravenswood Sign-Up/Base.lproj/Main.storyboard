@@ -74,7 +74,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loA-Vq-jIg">
                                 <rect key="frame" x="140" y="412" width="106" height="57"/>
-                                <color key="backgroundColor" red="0.0" green="0.33725490196078434" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.0" green="0.36862745099999999" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="Ef2-Pw-La9"/>
                                 </constraints>
@@ -110,7 +110,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please click on a time slot below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vr2-sm-k29">
                                 <rect key="frame" x="65" y="310.5" width="246.5" height="20.5"/>
-                                <color key="backgroundColor" red="0.4128689236111111" green="0.43446180555555558" blue="0.41694991507222234" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.0" green="0.36862745099999999" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
@@ -119,6 +119,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJQ-dJ-s2a">
                                         <rect key="frame" x="0.0" y="0.0" width="101.5" height="30"/>
+                                        <color key="backgroundColor" red="0.43921568630000002" green="0.45098039220000002" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="TimeButton1Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KP8-ys-H9i"/>
@@ -126,6 +127,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlL-Sn-J3f">
                                         <rect key="frame" x="121.5" y="0.0" width="102" height="30"/>
+                                        <color key="backgroundColor" red="0.43921568630000002" green="0.45098039220000002" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="TimeButton2Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rj1-4q-EIu"/>
@@ -133,6 +135,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JY-h0-iea">
                                         <rect key="frame" x="243.5" y="0.0" width="101.5" height="30"/>
+                                        <color key="backgroundColor" red="0.43921568630000002" green="0.45098039220000002" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="TimeButton3Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rKm-yp-hGH"/>
@@ -303,7 +306,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpf-b1-oFz">
                                 <rect key="frame" x="135" y="452" width="104" height="57"/>
-                                <color key="backgroundColor" red="0.0" green="0.33725490200000002" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.0" green="0.36862745099999999" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="m1D-Wb-2xw"/>
                                 </constraints>
@@ -416,9 +419,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ravenswoods Admin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkF-lp-hhX">
-                                <rect key="frame" x="60" y="101" width="262" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ravenswoods Admin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkF-lp-hhX">
+                                <rect key="frame" x="60" y="101" width="255" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="Gnf-ki-IhI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -448,7 +453,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwX-oB-5ef">
                                         <rect key="frame" x="20" y="106" width="335" height="45"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.36862745099999999" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="sm4-rh-JeZ"/>
                                         </constraints>
@@ -480,7 +485,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Please fill out all fields" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nV8-8C-ckm">
-                                <rect key="frame" x="10" y="218.5" width="355" height="20.5"/>
+                                <rect key="frame" x="10" y="219" width="355" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.019607843137254902" alpha="0.58999999999999997" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -491,10 +496,14 @@
                             <constraint firstItem="36o-6Q-lBH" firstAttribute="trailing" secondItem="nV8-8C-ckm" secondAttribute="trailing" constant="10" id="CSI-yS-HfF"/>
                             <constraint firstItem="EXs-t9-Xhb" firstAttribute="leading" secondItem="36o-6Q-lBH" secondAttribute="leading" id="DHp-tv-7uC"/>
                             <constraint firstItem="EXs-t9-Xhb" firstAttribute="trailing" secondItem="36o-6Q-lBH" secondAttribute="trailing" id="GGA-dx-j2p"/>
+                            <constraint firstItem="wkF-lp-hhX" firstAttribute="leading" secondItem="36o-6Q-lBH" secondAttribute="leading" constant="60" id="O4Z-oR-6Cm"/>
+                            <constraint firstItem="nV8-8C-ckm" firstAttribute="top" secondItem="wkF-lp-hhX" secondAttribute="bottom" constant="41" id="Thh-PI-HCi"/>
                             <constraint firstItem="36o-6Q-lBH" firstAttribute="trailing" secondItem="EXs-t9-Xhb" secondAttribute="trailing" id="acD-ax-XPY"/>
+                            <constraint firstItem="wkF-lp-hhX" firstAttribute="top" secondItem="36o-6Q-lBH" secondAttribute="top" constant="37" id="cxI-bW-rkJ"/>
                             <constraint firstItem="nV8-8C-ckm" firstAttribute="leading" secondItem="36o-6Q-lBH" secondAttribute="leading" constant="10" id="ekN-0X-Hz9"/>
                             <constraint firstItem="scV-nc-SdJ" firstAttribute="leading" secondItem="36o-6Q-lBH" secondAttribute="leading" id="iTt-Vy-Iqb"/>
                             <constraint firstItem="36o-6Q-lBH" firstAttribute="trailing" secondItem="scV-nc-SdJ" secondAttribute="trailing" id="jvc-0g-YiJ"/>
+                            <constraint firstItem="36o-6Q-lBH" firstAttribute="trailing" secondItem="wkF-lp-hhX" secondAttribute="trailing" constant="60" id="n6v-3k-cfr"/>
                             <constraint firstItem="36o-6Q-lBH" firstAttribute="bottom" secondItem="scV-nc-SdJ" secondAttribute="bottom" constant="220" id="ngZ-WM-FLI"/>
                             <constraint firstItem="scV-nc-SdJ" firstAttribute="top" secondItem="nV8-8C-ckm" secondAttribute="bottom" constant="8" id="oJH-cG-ZZy"/>
                             <constraint firstItem="EXs-t9-Xhb" firstAttribute="bottom" secondItem="36o-6Q-lBH" secondAttribute="bottom" id="p1a-BK-oce"/>
@@ -526,7 +535,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTT-JB-fgb">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="126.5"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.4392156862745098" green="0.45098039215686275" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Create Event"/>
                                         <connections>
                                             <segue destination="cIP-L4-Yno" kind="show" identifier="AdminCreateEvent" id="nEZ-vY-cuA"/>
@@ -534,7 +543,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKs-qs-GWI">
                                         <rect key="frame" x="0.0" y="126.5" width="335" height="126"/>
-                                        <color key="backgroundColor" red="0.066666666669999999" green="0.4823529412" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.0" green="0.36862745099999999" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="View Sign-Up Information"/>
                                         <connections>
                                             <segue destination="kZt-kP-jo9" kind="show" identifier="AdminVolunteerInfo" id="voW-Bl-XFW"/>
@@ -542,7 +551,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wf9-hG-jcW">
                                         <rect key="frame" x="0.0" y="252.5" width="335" height="126.5"/>
-                                        <color key="backgroundColor" red="0.0" green="0.33725490200000002" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.396078431372549" green="0.34509803921568627" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Register New Admin"/>
                                         <connections>
                                             <segue destination="aCF-Rf-bK9" kind="show" id="N1W-oC-UcD"/>
@@ -686,7 +695,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9cs-Zl-vEQ">
                                 <rect key="frame" x="118" y="513" width="139" height="55"/>
-                                <color key="backgroundColor" red="0.0" green="0.33725490200000002" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.39607843139999999" green="0.34509803919999998" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Submit">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Submit">
@@ -883,12 +892,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="About Image" translatesAutoresizingMaskIntoConstraints="NO" id="Wol-vx-Gjc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2018-09-16 at 7.55.42 PM-1" translatesAutoresizingMaskIntoConstraints="NO" id="Wol-vx-Gjc">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="j9h-QQ-KT0">
                                 <rect key="frame" x="50" y="114" width="275" height="454"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.60694028253424659" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.89276541095890416" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">The Ravenswood City School District (RCSD) in San Mateo County is a unique academic environment that draws from the culturally rich communities of East Palo Alto and eastern Menlo Park. The ethnic make-up of the population is predominantly Hispanic (79%), African American (10%), Pacific Islander (9%) and other (2%).  RCSD serves some 4,200 students in kindergarten through eighth grades in eight schools that includes a child development center, one middle school, one dual immersion academy and five schools that include 6th through 8th grade. 
 
 The district has embarked upon an aggressive initiative to improve the educational opportunities provided for students and their families. ThisJourney to Excellence strives to improve the academic, social, and overall health and economic conditions for the entire Ravenswood community.
@@ -955,7 +964,7 @@ The district has embarked upon an aggressive initiative to improve the education
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBL-zT-9PF">
                                         <rect key="frame" x="118" y="122" width="139" height="69"/>
-                                        <color key="backgroundColor" red="0.48184136284722218" green="0.4823529411764706" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.39607843139999999" green="0.34509803919999998" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                         <state key="normal" title="OK">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1112,17 +1121,17 @@ The district has embarked upon an aggressive initiative to improve the education
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWD-Aw-IUc">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.43921568630000002" green="0.45098039220000002" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33t-DV-xaj">
                                         <rect key="frame" x="0.0" y="128" width="375" height="127.5"/>
-                                        <color key="backgroundColor" red="0.066666666669999999" green="0.4823529412" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.0" green="0.36862745099999999" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNo-3P-s3K">
                                         <rect key="frame" x="0.0" y="255.5" width="375" height="128"/>
-                                        <color key="backgroundColor" red="0.0" green="0.33725490200000002" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.396078431372549" green="0.34509803921568627" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                 </subviews>
@@ -1318,8 +1327,8 @@ The district has embarked upon an aggressive initiative to improve the education
     <resources>
         <image name="2005172-200" width="100" height="100"/>
         <image name="60390_full" width="320" height="213"/>
-        <image name="About Image" width="2735" height="1910"/>
         <image name="AppleTree" width="106" height="123"/>
+        <image name="Screen Shot 2018-09-16 at 7.55.42 PM-1" width="376" height="371"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Kdm-rj-bIW"/>
