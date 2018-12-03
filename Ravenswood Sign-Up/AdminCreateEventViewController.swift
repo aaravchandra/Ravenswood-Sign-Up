@@ -110,7 +110,11 @@ class AdminCreateEventViewController: UIViewController, TimePickerDelegate {
     
     
     
-    
+    func DeleteTime() {
+        
+        ButtonClicked.setTitle("Time", for: .normal)
+        
+    }
     
     
     func TimePass(_ Time: Date?) {

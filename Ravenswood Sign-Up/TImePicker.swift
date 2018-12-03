@@ -10,6 +10,7 @@ import UIKit
 
 protocol TimePickerDelegate : class {
     func TimePass(_ Time: Date? )
+    func DeleteTime ()
 }
 
 class TImePicker: UIViewController {
@@ -27,7 +28,6 @@ class TImePicker: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         
-        print("Hiiiiiiiii")
     }
     
     
@@ -55,6 +55,12 @@ class TImePicker: UIViewController {
     
     
     
+    }
+    @IBAction func DeleteFunction(_ sender: Any) {
+    
+        delegate?.DeleteTime()
+        
+     dismiss(animated: true, completion: nil)
     }
     
     /*

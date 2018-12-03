@@ -133,7 +133,10 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
         // ADDED - Example write data
         
         let Name = NameField.text
-        if !(Name?.isEmpty)! {
+        if (!(Name?.isEmpty)! && (TimeButton1.backgroundColor == UIColor.yellow || TimeButton2.backgroundColor == UIColor.yellow || TimeButton3.backgroundColor == UIColor.yellow))
+        {
+            
+            
                 let PhoneNumber = PhoneNumberField.text
                 let Email = EmailField.text
                 
@@ -144,16 +147,36 @@ class VolunteerSignUpViewController: UIViewController, UITextFieldDelegate {
                           let Users = Data.children.allObjects as![DataSnapshot]
                             self.NoOfUsers = Users.count
                             
+                            
+                            
                         }
                     }
                     
                     
                 })
                 
+        var TimeArray = [] as [String]
+            
+            if ( TimeButton1.backgroundColor == UIColor.yellow && TimeButton1.titleLabel?.text != "Button") {
                 
+                TimeArray.append((TimeButton1.titleLabel?.text)!)
+               
+            }
+            
+            if ( TimeButton2.backgroundColor == UIColor.yellow && TimeButton2.titleLabel?.text != "Button") {
                 
+                TimeArray.append((TimeButton2.titleLabel?.text)!)
                 
-                self.ref?.child("Events").child(NameOfEvent!).child("Sign-Ups").child("User"+String(NoOfUsers)).setValue(["Name": Name, "Email":Email, "Phone":PhoneNumber])
+            }
+            if ( TimeButton3.backgroundColor == UIColor.yellow && TimeButton3.titleLabel?.text != "Button") {
+                
+                TimeArray.append((TimeButton3.titleLabel?.text)!)
+                
+            }
+            
+            self.ref?.child("Events").child(NameOfEvent!).child("Sign-Ups").child("User"+String(NoOfUsers)).setValue(["Name": Name, "Email":Email, "Phone":PhoneNumber, "Timeslots":TimeArray])
+            
+            
             }
         
         
