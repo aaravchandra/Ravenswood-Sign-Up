@@ -11,6 +11,7 @@
 		1109D30A20B255FF003FC4A5 /* AdminCreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1109D30920B255FF003FC4A5 /* AdminCreateEventViewController.swift */; };
 		111210EA21583D3400CE4B41 /* EventInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111210E921583D3400CE4B41 /* EventInfoViewController.swift */; };
 		1114FDBF217D5D5C008B984C /* VolunteerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1114FDBE217D5D5C008B984C /* VolunteerInfoViewController.swift */; };
+		115AF34D21B4D6B90076667F /* SignUpCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115AF34C21B4D6B90076667F /* SignUpCompletedViewController.swift */; };
 		116B06562186984C0088FDE8 /* PeopleInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116B06552186984C0088FDE8 /* PeopleInfoCell.swift */; };
 		116B0658218699310088FDE8 /* PeopleInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116B0657218699310088FDE8 /* PeopleInfoTableViewController.swift */; };
 		11A618E720D7484D0065AF2E /* TImePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A618E620D7484C0065AF2E /* TImePicker.swift */; };
@@ -34,6 +35,7 @@
 		1109D30920B255FF003FC4A5 /* AdminCreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminCreateEventViewController.swift; sourceTree = "<group>"; };
 		111210E921583D3400CE4B41 /* EventInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInfoViewController.swift; sourceTree = "<group>"; };
 		1114FDBE217D5D5C008B984C /* VolunteerInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerInfoViewController.swift; sourceTree = "<group>"; };
+		115AF34C21B4D6B90076667F /* SignUpCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCompletedViewController.swift; sourceTree = "<group>"; };
 		116B06552186984C0088FDE8 /* PeopleInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInfoCell.swift; sourceTree = "<group>"; };
 		116B0657218699310088FDE8 /* PeopleInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInfoTableViewController.swift; sourceTree = "<group>"; };
 		11A618E620D7484C0065AF2E /* TImePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TImePicker.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				116B0657218699310088FDE8 /* PeopleInfoTableViewController.swift */,
 				D90E62A0218AB16900240235 /* RegisterNewUser.swift */,
 				11FFA4552193EC440051CA9C /* OkButtonAdminViewController.swift */,
+				115AF34C21B4D6B90076667F /* SignUpCompletedViewController.swift */,
 			);
 			path = "Ravenswood Sign-Up";
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				53CA1793201EBF8000018837 /* VolunteerSignUpViewController.swift in Sources */,
 				53CA1799201EBF8000018837 /* Ravenswood_Sign_Up.xcdatamodeld in Sources */,
 				116B06562186984C0088FDE8 /* PeopleInfoCell.swift in Sources */,
+				115AF34D21B4D6B90076667F /* SignUpCompletedViewController.swift in Sources */,
 				D90E62A1218AB16900240235 /* RegisterNewUser.swift in Sources */,
 				53B569DF20281D2000929CF7 /* EventData.swift in Sources */,
 				53B569DD202813ED00929CF7 /* EventTableViewController.swift in Sources */,
